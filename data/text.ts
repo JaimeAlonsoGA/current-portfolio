@@ -1,11 +1,15 @@
 export const text = {
-    links: {
-      second: "about",
-      main: "projects",
+  links: {
+    second: "about",
+    main: "projects",
+  },
+  current: {
+    name: "Jaime Alonso",
+    description: {
+      left: "Developing",
+      decoration: "cutting-edge",
+      right: "cross-platform applications and software solutions"
     },
-    current: {
-      name: "Jaime Alonso",
-      description: "Developing cutting-edge cross-platform applications",
-      tag: "Software",
-    },
-  };
+    tag: "Software",
+  },
+};

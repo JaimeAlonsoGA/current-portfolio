@@ -1,16 +1,19 @@
 import { PiGooglePlayLogoLight } from "react-icons/pi";
 import { TbWorld } from "react-icons/tb";
 
-export interface projects {
-  title: string;
-  description: string;
-  tags: string[];
-  github?: string;
-  link?: {
-    url: string;
-    icon: React.ReactNode;
-  };
-  seeMore?: boolean;
+export interface ProjectProps {
+  project: {
+    title: string;
+    description: string;
+    tags: string[];
+    github?: string;
+    link?: {
+      url: string;
+      icon: React.ReactNode;
+    };
+    seeMore?: boolean;
+  }
+  i: number;
 }
 
 const appIcon = <PiGooglePlayLogoLight size={16} />;
@@ -18,17 +21,20 @@ const webIcon = <TbWorld size={16} />;
 
 export const projects = [
   {
-    title: "Mirto Internship",
+    title: "MIRTO Internship",
     description:
-      "Designed and developed end-to-end software solutions for MIRTO Group during my 9-month internship",
+      "Designed and developed end-to-end software solutions for CREACIONES MIRTO, S.A.U. during my 9-month internship as a fullstack developer",
     tags: [
+      "fullstack",
       "react",
-      "javascript",
       "typescript",
+      "react native",
+      "expo",
       "node",
       "graphql",
-      "express",
       "tailwindcss",
+      "firebase",
+      "figma",
     ],
     seeMore: true,
   },
