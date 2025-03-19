@@ -5,7 +5,7 @@ interface ContainerProps {
 }
 
 const Container: React.FC<ContainerProps> = ({ children }) => (
-  <main className="flex flex-col justify-center items-center h-screen font-[family-name:var(--font-geist-sans)]">
+  <main className="px-8 flex flex-col justify-center items-center h-screen font-[family-name:var(--font-geist-sans)]">
     {children}
   </main>
 );

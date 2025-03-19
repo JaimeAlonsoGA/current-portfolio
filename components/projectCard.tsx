@@ -21,11 +21,11 @@ const ProjectCard: React.FC<ProjectProps> = ({ project, i }) => {
         <CardDescription>{project.description}</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-wrap gap-4 text-justify text-balance text-sm">
-          {project.tags.map((tag, i) => (
-            <Badge variant={"outline"} key={i}>
-              {tag}
-            </Badge>
-          ))}
+        {project.tags.map((tag, i) => (
+          <Badge variant={"outline"} key={i}>
+            {tag}
+          </Badge>
+        ))}
       </CardContent>
       <CardFooter className="flex justify-between">
         <div className="flex flex-row gap-4 items-center">

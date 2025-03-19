@@ -8,8 +8,10 @@ export default function Home() {
     <div className="flex flex-col gap-8 h-full items-center sm:items-start">
       <Hero />
       <Projects />
-      <Blanket />
-      <SeeMore />
+      <div className="relative flex w-full">
+        <Blanket />
+        <SeeMore />
+      </div>
     </div>
   );
 }
