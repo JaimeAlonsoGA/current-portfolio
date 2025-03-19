@@ -1,20 +1,19 @@
-'use client'
-
-import { IoMdPlay } from "react-icons/io";
-import { Button } from "./ui/button"
-
+import { FaLinkedinIn } from "react-icons/fa";
 
 const Header: React.FC = () => {
-    return (
-        <header className="flex flex-row absolute w-full top-0 items-center p-4">
-            <div className="flex flex-col relative ml-auto items-center">
-                <Button variant="outline" >
-                    <IoMdPlay />
-                </Button>
-                <a href="" className="text-xs text-gray-500 hover:underline">Soundbank</a>
-            </div>
-        </header>
-    )
-}
+  return (
+    <header className="flex flex-row w-full absolute top-5 justify-center items-center p-4">
+      <a
+        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+        href="https://www.linkedin.com/in/jaime360/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaLinkedinIn />
+        Linkedin
+      </a>
+    </header>
+  );
+};
 
 export default Header;

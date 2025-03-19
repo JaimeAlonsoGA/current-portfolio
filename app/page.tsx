@@ -1,34 +1,21 @@
+import ProjectCard from "@/components/projectCard";
 import Title from "@/components/ui/title";
-import { CODE_TEXT } from "@/lib/utils";
-import Link from "next/link";
+import { projects } from "@/data/projects";
+import { text } from "@/data/text";
 
 export default function Home() {
   return (
     <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-      <div className="flex flex-row gap-4 text-sm text-gray-500">
-        <Link href="/about">About</Link>
-        <Link href="/projects">Projects</Link>
-      </div>
-      <Title title="Jaime Alonso" />
-      <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-        <li className="mb-2">Creating captivating audio experiences —
-          <code className={CODE_TEXT}>
-            interactive media
-          </code>
-        </li>
-        <li className="mb-2">Developing cutting-edge cross-platform applications —
-          <code className={"bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold"}>
-            software
-          </code>
-        </li>
+      <Title title={text.current.name} />
+      <ol className="text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+        <li>{text.current.description}</li>
       </ol>
+      <div className="w-full flex flex-wrap gap-6">
+        {projects.map((project, i) => {
+          return <ProjectCard project={project} i={i} />;
+        })}
+      </div>
+      <div className="flex w-full absolute bottom-0 pt-64 backdrop-blur-sm bg-gradient-to-b from-transparent to-white"></div>
     </main>
   );
 }
-
-{/* <li>
-  Currently working at{" "}
-  <code className={CODE_TEXT}>
-    undefined
-  </code>
-</li> */}
