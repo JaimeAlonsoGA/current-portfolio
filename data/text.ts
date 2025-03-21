@@ -5,11 +5,7 @@ export const text = {
   },
   current: {
     name: "Jaime Alonso",
-    description: {
-      left: "Developing",
-      decoration: "cutting-edge",
-      right: "cross-platform applications and software solutions"
-    },
+    description: "Developing cutting-edge cross-platform applications and software solutions",
     tag: "Software",
   },
 };

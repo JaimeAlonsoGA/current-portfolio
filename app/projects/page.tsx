@@ -1,51 +1,42 @@
-import Featured from "@/components/featured";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import Title from "@/components/ui/title";
-import Link from "next/link";
+import ProjectCard from "@/components/projectCard";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { projects } from "@/data/projects";
 
-export default function Projets() {
+export default function Software() {
+  const allTags = Array.from(
+    new Set(projects.flatMap((project) => project.tags))
+  );
+  const container = "flex flex-wrap gap-4 mt-4";
+
   return (
-    <section className="flex flex-col gap-4 row-start-2 items-center sm:items-start justify-center max-w-full md:max-w-4xl">
-      <div className="w-full flex flex-col-reverse md:flex-row items-start md:items-end md:justify-between">
-        <div className="flex flex-col-reverse md:flex-col items-start gap-4">
-          <div className="flex flex-row gap-8 text-sm text-gray-500 text-left">
-            <Link href="projects/software">Software</Link>
-            <Link href="projects/audio">Audio</Link>
-          </div>
-          <Title title="Projects" />
+    <div className="w-full flex flex-col h-full">
+      <Tabs defaultValue="all" className="h-full w-full overflow-y-auto scrollbar-hide">
+        <div className="sticky top-5 mt-20 flex flex-col items-center justify-end">
+          <TabsList>
+            <TabsTrigger value="all">Todos</TabsTrigger>
+            <TabsTrigger value="app">App</TabsTrigger>
+            <TabsTrigger value="program">Solution</TabsTrigger>
+            <TabsTrigger value="web">Web</TabsTrigger>
+          </TabsList>
         </div>
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/">Home</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>
-                <span className="font-semibold">. . .</span>
-              </BreadcrumbPage>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink href="about/qaa">Q&A</BreadcrumbLink>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </div>
-      <Featured />
-    </section>
+        <TabsContent value="all" className={container}>
+          {projects.map((project, i) => {
+            return (
+              <div key={i}>
+                <ProjectCard project={project} />
+              </div>
+            );
+          })}
+        </TabsContent>
+      </Tabs>
+      <footer className="flex flex-wrap h-fit items-end md:flex-row justify-between gap-y-2 py-4">
+        {allTags.map((tag) => (
+          <Badge variant={"secondary"} key={tag}>
+            {tag}
+          </Badge>
+        ))}
+      </footer>
+    </div>
   );
 }
