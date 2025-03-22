@@ -17,7 +17,7 @@ const Header: React.FC = () => {
         rel="noopener noreferrer"
       >
         <FaLinkedinIn />
-        Linkedin
+        LinkedIn
       </a>
     </header>
   );

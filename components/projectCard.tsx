@@ -27,39 +27,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
             </Badge>
           ))}
         </CardContent>
-        <CardFooter className="flex justify-between">
-          {/* <div className="flex flex-row gap-4 items-center">
-            {project.github && (
-              <a
-                href={project.github}
-                target="_blank"
-                className="flex flex-row gap-1 group items-center"
-              >
-                <p className="text-gray-500 text-xs group-hover:underline">
-                  Github
-                </p>
-                <FaGithub />
-              </a>
-            )} */}
-          {/* {project.link && (
-              <a
-                href={project.link.url}
-                target="_blank"
-                className="flex flex-row gap-1 group items-center"
-              >
-                <p className="text-gray-500 text-xs group-hover:underline">
-                  Website
-                </p>
-                <p className="text-xs text-gray-500 font-semibold">
-                  {project.link.icon}
-                </p>
-              </a>
-            )}
-          </div>
-          {project.seeMore && (
-            <a className="z-20 text-xs text-gray-500 font-semibold">. . .</a>
-          )} */}
-        </CardFooter>
+        <CardFooter className="flex justify-between"></CardFooter>
       </Card>
     </Link>
   );

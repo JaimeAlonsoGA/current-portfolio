@@ -19,7 +19,7 @@ export default async function Project({
   }
 
   return (
-    <div className="flex flex-col gap-8 h-full mt-20 items-center overflow-y-auto scrollbar-hide">
+    <div className="flex flex-col gap-8 h-full mt-20 items-center overflow-y-auto scrollbar-hide max-w-11/12">
       <div className="flex flex-row items-center gap-8 bg-white">
         <Title title={project.title.toUpperCase()} />
         {project.logo && (
@@ -46,24 +46,68 @@ export default async function Project({
           );
         })}
       </div>
-      <span className="flex flex-col gap-2">
-        {project.description.split("\n").map((line, index) => (
-          <p key={index} className="text-justify">
-            {line}
-            <br />
-          </p>
-        ))}
-      </span>
+      <div className="w-full flex flex-col md:flex-row gap-12 justify-center items-start">
+        <ol className="list-inside list-disc flex flex-col gap-8 w-full md:w-1/2">
+          {project.description.split("\n").map((line, index) => {
+            const parts = line.split(/(\[b\].*?\[\/b\]|\[link:.*?\]\(.*?\))/g);
+
+            return (
+              <li key={index} className="text-justify">
+                {parts.map((part, index) => {
+                  if (part.startsWith("[b]") && part.endsWith("[/b]")) {
+                    return <strong key={index}>{part.slice(3, -4)} </strong>;
+                  }
+
+                  if (part.startsWith("[link:") && part.includes("](")) {
+                    const text = part.slice(6, part.indexOf("]("));
+                    const url = part.slice(part.indexOf("](") + 2, -1);
+                    return (
+                      <a
+                        key={index}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-500 underline after:content-['_↗'] font-medium"
+                      >
+                        {text}
+                      </a>
+                    );
+                  }
+                  return part; // Return the plain text part
+                })}
+                <br />
+              </li>
+            );
+          })}
+        </ol>
+        <div>
+          <iframe
+            className="rounded-lg"
+            width="315"
+            height="560"
+            src={project.video}
+            title={project.title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          ></iframe>
+        </div>
+      </div>
       <div className="w-full flex flex-wrap justify-around gap-4 scrollbar-hide ">
         {project.images?.map((image, i) => (
-          <Image
-            key={i}
-            src={image}
-            alt={`image of ${project.title} project`}
-            width={200}
-            height={400}
-            className="rounded-md"
-          />
+          <div className="flex flex-col gap-2">
+            <Image
+              key={i}
+              src={image}
+              alt={`image of ${project.title} project`}
+              className="rounded-lg"
+              width={300}
+              height={200}
+            />
+            <p className="text-xs italic text-center">
+              {image.includes("figma")
+                ? "Design on Figma"
+                : "Application screen"}
+            </p>
+          </div>
         ))}
       </div>
       <SeeMoreOnProject />
