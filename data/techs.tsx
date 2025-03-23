@@ -10,6 +10,7 @@ import { CgFigma } from "react-icons/cg";
 import { TbBrandReactNative } from "react-icons/tb";
 import { SiExpo } from "react-icons/si";
 import { SiVercel } from "react-icons/si";
+import { SiReactquery } from "react-icons/si";
 
 export interface TechsInterface {
   id: string;
@@ -24,13 +25,13 @@ export const techs: TechsInterface[] = [
     icon: SiPreact,
   },
   {
-    id: "next",
-    name: "Next.js",
+    id: "nextjs",
+    name: "Next",
     icon: SiNextdotjs,
   },
   {
-    id: "tailwind",
-    name: "TailwindCSS",
+    id: "tailwindcss",
+    name: "Tailwind",
     icon: RiTailwindCssFill,
   },
   {
@@ -72,5 +73,10 @@ export const techs: TechsInterface[] = [
     id: "vercel",
     name: "Vercel",
     icon: SiVercel,
+  },
+  {
+    id: "tanstack query",
+    name: "Tanstack Query",
+    icon: SiReactquery,
   }
 ];

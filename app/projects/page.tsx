@@ -11,7 +11,10 @@ export default function Software() {
 
   return (
     <div className="w-full flex flex-col h-full">
-      <Tabs defaultValue="all" className="h-full w-full overflow-y-auto scrollbar-hide">
+      <Tabs
+        defaultValue="all"
+        className="h-full w-full overflow-y-auto scrollbar-hide"
+      >
         <div className="sticky top-5 mt-20 flex flex-col items-center justify-end">
           <TabsList>
             <TabsTrigger value="all">Todos</TabsTrigger>
@@ -23,7 +26,57 @@ export default function Software() {
         <TabsContent value="all" className={container}>
           {projects.map((project, i) => {
             return (
-              <div key={i}>
+              <div key={i} className="relative">
+                {project.highlight && (
+                  <Badge className="absolute top-4 right-4" variant={"default"}>
+                    ⭐
+                  </Badge>
+                )}
+                <ProjectCard project={project} />
+              </div>
+            );
+          })}
+        </TabsContent>
+        <TabsContent value="app" className={container}>
+          {projects.map((project, i) => {
+            if (!project.type.includes("app")) return null;
+            return (
+              <div key={i} className="relative">
+                {project.highlight && (
+                  <Badge className="absolute top-4 right-4" variant={"default"}>
+                    ⭐
+                  </Badge>
+                )}
+                <ProjectCard project={project} />
+              </div>
+            );
+          })}
+        </TabsContent>
+        <TabsContent value="program" className={container}>
+          {projects.map((project, i) => {
+            if (!project.type.includes("program")) return null;
+            return (
+              <div key={i} className="relative">
+                {project.highlight && (
+                  <Badge className="absolute top-4 right-4" variant={"default"}>
+                    ⭐
+                  </Badge>
+                )}
+                <ProjectCard project={project} />
+              </div>
+            );
+          })}
+        </TabsContent>
+        <TabsContent value="web" className={container}>
+          {projects.map((project, i) => {
+            if (!project.type.includes("web")) return null;
+            return (
+              <div key={i} className="relative">
+                {project.highlight && (
+                  <Badge className="absolute top-4 right-4" variant={"default"}>
+                    ⭐
+                  </Badge>
+                )}
                 <ProjectCard project={project} />
               </div>
             );
