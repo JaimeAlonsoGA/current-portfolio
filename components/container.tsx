@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Background from "./background";
 
 interface ContainerProps {
   children: ReactNode;
@@ -7,6 +8,7 @@ interface ContainerProps {
 const Container: React.FC<ContainerProps> = ({ children }) => (
   <main className="to-gray-100 px-8 flex flex-col justify-center items-center h-screen font-[family-name:var(--font-geist-sans)]">
     {children}
+    <Background />
   </main>
 );
 

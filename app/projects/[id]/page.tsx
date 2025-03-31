@@ -1,10 +1,14 @@
 import { SeeMoreOnProject } from "@/components/seeMore";
+import { Badge } from "@/components/ui/badge";
 import Title from "@/components/ui/title";
 import { projects } from "@/data/projects";
 import { techs } from "@/data/techs";
 import Image from "next/image";
 import React from "react";
+import { FaAppStore } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
+import { IoPhonePortraitOutline } from "react-icons/io5";
+import { TbWorld } from "react-icons/tb";
 
 export default async function Project({
   params,
@@ -20,7 +24,23 @@ export default async function Project({
 
   return (
     <div className="flex flex-col gap-8 h-full mt-20 items-center overflow-y-auto scrollbar-hide max-w-11/12">
-      <div className="flex flex-row items-center gap-8 bg-white">
+      <div className="flex flex-wrap justify-between items-start gap-4 border rounded-md p-4 mt-4 bg-white">
+        {project.tags.map((tag, i) => {
+          const tech = techs.find((tech) => tech.id === tag);
+          if (!tech) {
+            return null;
+          }
+          return (
+            <div className="flex flex-col gap-2 items-center" key={i}>
+              {tech ? <tech.icon key={i} /> : null}
+              <Badge variant={"default"} key={i}>
+                {tech.name}
+              </Badge>{" "}
+            </div>
+          );
+        })}
+      </div>
+      <div className="flex flex-row items-center gap-8 backdrop-blur-xl rounded-full p-4 text-white">
         <Title title={project.title.toUpperCase()} />
         {project.logo && (
           <Image
@@ -32,22 +52,8 @@ export default async function Project({
           />
         )}
       </div>
-      <div className="grid grid-cols-4 items-start gap-4 border rounded-md p-4">
-        {project.tags.map((tag, i) => {
-          const tech = techs.find((tech) => tech.id === tag);
-          if (!tech) {
-            return null;
-          }
-          return (
-            <div className="flex flex-col gap-2 items-center" key={i}>
-              {tech ? <tech.icon key={i} /> : null}
-              <p>{tech.name}</p>
-            </div>
-          );
-        })}
-      </div>
-      <div className="w-full flex flex-col md:flex-row gap-12 justify-center items-start">
-        <ol className="list-inside list-disc flex flex-col gap-8 w-full md:w-1/2">
+      <div className="flex flex-col md:flex-row gap-12 w-1/2 border p-4 rounded-md shadow-md bg-white">
+        <ol className="flex flex-col gap-2">
           {project.description.split("\n").map((line, index) => {
             const parts = line.split(/(\[b\].*?\[\/b\]|\[link:.*?\]\(.*?\))/g);
 
@@ -80,18 +86,20 @@ export default async function Project({
             );
           })}
         </ol>
-        <div>
-          <iframe
-            className="rounded-lg"
-            width="315"
-            height="560"
-            src={project.video}
-            title={project.title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          ></iframe>
-        </div>
+        {project.video && (
+          <div>
+            <iframe
+              className="rounded-lg"
+              width="315"
+              height="560"
+              src={project.video}
+              title={project.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            ></iframe>
+          </div>
+        )}
       </div>
-      <div className="w-full flex flex-wrap justify-around gap-4 scrollbar-hide ">
+      <div className="flex flex-wrap gap-4 border p-4 rounded-md shadow-md">
         {project.images?.map((image, i) => (
           <div className="flex flex-col gap-2">
             <Image
@@ -99,10 +107,10 @@ export default async function Project({
               src={image}
               alt={`image of ${project.title} project`}
               className="rounded-lg"
-              width={300}
-              height={200}
+              width={200}
+              height={100}
             />
-            <p className="text-xs italic text-center">
+            <p className="text-xs italic text-center text-white">
               {image.includes("figma")
                 ? "Design on Figma"
                 : "Application screen"}
@@ -112,26 +120,28 @@ export default async function Project({
       </div>
       <SeeMoreOnProject />
       <footer className="w-full bg-white fixed bottom-0 flex flex-row justify-center gap-12 p-1">
-        {project.github && (
-          <a
-            href={project.github}
-            target="_blank"
-            className="flex flex-row gap-1 items-center text-gray-500 text-xs group-hover:underline"
-          >
-            Github
-            <FiGithub />
-          </a>
-        )}
-        {project.link && (
-          <a
-            href={project.link.url}
-            target="_blank"
-            className="flex flex-row gap-1 items-center text-gray-500 text-xs group-hover:underline"
-          >
-            {project.type === "web" ? "Website" : "Play Store"}
-            {project.link.icon}
-          </a>
-        )}
+        {project.link &&
+          project.link.map((link, i) => {
+            return (
+              <a
+                key={i}
+                href={link.url}
+                target="_blank"
+                className="text-xs items-center flex flex-row hover:underline underline-offset-2"
+              >
+                {link.label}
+                {link.label === "Website" ? (
+                  <TbWorld className="inline-block ml-1" />
+                ) : link.label === "Play Store" ? (
+                  <IoPhonePortraitOutline className="inline-block ml-1" />
+                ) : link.label === "App Store" ? (
+                  <FaAppStore className="inline-block ml-1 " />
+                ) : link.label === "GitHub" ? (
+                  <FiGithub className="inline-block ml-1" />
+                ) : null}
+              </a>
+            );
+          })}
       </footer>
     </div>
   );
