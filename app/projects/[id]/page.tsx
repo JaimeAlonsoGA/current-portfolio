@@ -32,7 +32,7 @@ export default async function Project({
           }
           return (
             <div className="flex flex-col gap-2 items-center" key={i}>
-              {tech ? <tech.icon key={i} /> : null}
+              {tech ? <tech.icon key={i + tag} /> : null}
               <Badge variant={"default"} key={i}>
                 {tech.name}
               </Badge>{" "}

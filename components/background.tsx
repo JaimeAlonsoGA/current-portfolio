@@ -8,7 +8,7 @@ const Background = () => {
     <motion.div
       className="absolute inset-0 -z-10 bg-cover bg-center"
       style={{
-        backgroundImage: "url('/bg11.jpg')", // Ruta de la imagen en la carpeta public
+        backgroundImage: "url('/bg.jpg')", // Ruta de la imagen en la carpeta public
       }}
       initial={{ backgroundPosition: "50% 50%" }}
       animate={{ backgroundPosition: ["50% 50%", "55% 45%", "50% 50%"] }}

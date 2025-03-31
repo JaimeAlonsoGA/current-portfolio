@@ -6,13 +6,14 @@ import { ProjectProps } from "@/data/projects";
 import Image from "next/image";
 import { FiGithub } from "react-icons/fi";
 import { TbWorld } from "react-icons/tb";
-import { FaAppStore } from "react-icons/fa";
+import { FaAppStore, FaStar } from "react-icons/fa";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { RiGitRepositoryPrivateLine } from "react-icons/ri";
 
 const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
   return (
-    <div className="bg-white group relative flex flex-row justify-between w-full p-4 border rounded-md shadow-lg max-w-4xl h-60 gap-4">
+    <div
+      className="bg-gray-50 group relative flex flex-row justify-between w-full p-4 rounded-md shadow-xl max-w-4xl h-60 gap-4">
       <div className="flex flex-col justify-between">
         <div className="flex flex-col gap-2">
           <h1 className="font-semibold text-xl">{project.title}</h1>
@@ -70,54 +71,24 @@ const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
         <Image
           src={project.images?.[0] ?? project.logo ?? ""}
           alt={project.title}
-          width={100}
-          height={100}
-          className="rounded-md hidden md:flex"
+          width={project.images?.[0]?.includes("card") ? 400 : 100}
+          height={0}
+          className="rounded-md hidden md:flex aspect-[16/9]"
+          loading="lazy"
         />
       )}
-      {project.highlight && (
+      {/* {project.highlight && (
         <Badge
           className="absolute top-2 right-2 group-hover:animate-pulse"
           variant={"default"}
         >
-          ⭐
+          <FaStar />
         </Badge>
-      )}
+      )} */}
     </div>
   );
 };
 
-// const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
-//   return (
-//     <Link
-//       href={`./projects/${project.id}`}
-//       className="flex w-full justify-center"
-//     >
-//       <Card className="flex flex-col w-full max-w-4xl h-60 relative">
-//         <CardHeader>
-//           <CardTitle className="mb-2">{project.title}</CardTitle>
-//           <CardDescription>{project.overview}</CardDescription>
-//         </CardHeader>
-//         <CardContent className="flex flex-row items-center justify-center">
-//           <div className="flex flex-wrap gap-4 text-sm">
-//             {project.tags.map((tag, i) => (
-//               <Badge variant={"outline"} key={i}>
-//                 {tag}
-//               </Badge>
-//             ))}
-//           </div>
-//           <Image
-//             src={project.images?.[0] ?? project.logo ?? ""}
-//             alt={project.title}
-//             width={100}
-//             height={100}
-//             className="rounded-md absolute right-10"
-//           />
-//         </CardContent>
-//         <CardFooter className="flex justify-between"></CardFooter>
-//       </Card>
-//     </Link>
-//   );
-// };
+//transition-transform duration-300 ease-in-out hover:translate-y-[-3px] hover:shadow-2xl
 
 export default ProjectCard;
