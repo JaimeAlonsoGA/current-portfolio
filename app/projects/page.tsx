@@ -1,4 +1,4 @@
-import ProjectCard from "@/components/projectCard";
+import { ProjectCard } from "@/components/projectCard";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { projects } from "@/data/projects";
@@ -7,7 +7,7 @@ export default function Software() {
   const allTags = Array.from(
     new Set(projects.flatMap((project) => project.tags))
   );
-  const container = "flex flex-col justify-center items-center gap-4 mt-4";
+  const container = "flex flex-col justify-center items-center gap-4 mt-6";
   const box = "relative flex w-full justify-center"
   
   return (
@@ -16,7 +16,7 @@ export default function Software() {
         defaultValue="all"
         className="h-full w-full overflow-y-auto scrollbar-hide"
       >
-        <div className="sticky top-5 mt-20 flex flex-col items-center justify-end z-20 ">
+        <div className="sticky top-5 mt-24 flex flex-col items-center justify-end z-20 ">
           <TabsList>
             <TabsTrigger value="all">Todos</TabsTrigger>
             <TabsTrigger value="app">App</TabsTrigger>

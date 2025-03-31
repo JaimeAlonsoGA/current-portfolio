@@ -42,10 +42,6 @@ export const projects = [
         url: "https://mirto.com",
         label: "App Store",
       },
-      {
-        url: "https://github.com/mirto1956",
-        label: "Private GitHub",
-      },
     ],
     images: [
       "/images/mirto/frame1.webp",
@@ -72,12 +68,6 @@ export const projects = [
     ],
     images: [
       "/images/400/card1.png",
-    ],
-    link: [
-      {
-        url: "https://github.com/mirto1956",
-        label: "Private GitHub",
-      },
     ],
     type: "app",
     highlight: true,
