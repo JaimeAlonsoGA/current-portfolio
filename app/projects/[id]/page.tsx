@@ -97,7 +97,7 @@ export default async function Project({
           </div>
         )}
       </div>
-      <div className="flex flex-wrap gap-4 border p-4 rounded-md shadow-md">
+      {project.images && <div className="flex flex-wrap gap-4 border p-4 rounded-md shadow-md">
         {project.images?.map((image, i) => (
           <div key={i} className="flex flex-col gap-2">
             <Image
@@ -115,7 +115,7 @@ export default async function Project({
             </p>
           </div>
         ))}
-      </div>
+      </div>}
       <SeeMoreOnProject />
       <footer className="w-full bg-gray-50 fixed bottom-0 flex flex-row justify-center gap-12 p-1">
         {project.link &&

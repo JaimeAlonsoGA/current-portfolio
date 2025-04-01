@@ -7,7 +7,7 @@ export default function Software() {
   const allTags = Array.from(
     new Set(projects.flatMap((project) => project.tags))
   );
-  const container = "flex flex-col justify-center items-center gap-4 mt-6";
+  const container = "flex flex-col justify-center items-center gap-4";
   const box = "relative flex w-full justify-center"
   
   return (
@@ -16,7 +16,7 @@ export default function Software() {
         defaultValue="all"
         className="h-full w-full overflow-y-auto scrollbar-hide"
       >
-        <div className="sticky top-5 mt-24 flex flex-col items-center justify-end z-20">
+        <div className="sticky top-5 mt-24 flex flex-col items-center justify-end z-20 mb-6">
           <TabsList className="bg-gray-50 bg-opacity-90">
             <TabsTrigger value="all">Todos</TabsTrigger>
             <TabsTrigger value="app">App</TabsTrigger>
@@ -64,13 +64,6 @@ export default function Software() {
           })}
         </TabsContent>
       </Tabs>
-      {/* <footer className="flex flex-wrap h-fit items-end md:flex-row justify-between gap-y-2 py-4">
-        {allTags.map((tag) => (
-          <Badge variant={"secondary"} key={tag}>
-            {tag}
-          </Badge>
-        ))}
-      </footer> */}
     </div>
   );
 }

@@ -32,7 +32,6 @@ export default function About() {
       <div className="mt-4 text-white text-sm sm:text-left tracking-widest">
         {writer}
       </div>
-      <Image src="/cloud6.png" alt="Jaime Alonso" width={200} height={200} className={`${writer.length > 24 ? "flex" : "hidden"}`} />
     </div>
   );
 }

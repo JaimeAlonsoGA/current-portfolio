@@ -70,7 +70,7 @@ export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
         <Image
           src={project.images?.[0] ?? project.logo ?? ""}
           alt={project.title}
-          width={project.images?.[0]?.includes("card") ? 400 : 100}
+          width={project.images?.[0]?.includes("card") ? 400 : 120}
           height={0}
           className="rounded-md hidden md:flex aspect-[16/9]"
           loading="lazy"

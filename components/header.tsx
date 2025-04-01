@@ -21,8 +21,7 @@ const Header: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        {/* <FaLinkedinIn /> */}
-        <p>LinkedIn</p>
+        LinkedIn
       </a>
     </div>
   );

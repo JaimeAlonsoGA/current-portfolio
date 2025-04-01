@@ -1,4 +1,4 @@
-import { SiPreact } from "react-icons/si";
+import { SiNodedotjs, SiPreact, SiTsnode } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
 import { IconType } from "react-icons/lib";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -11,6 +11,7 @@ import { TbBrandReactNative } from "react-icons/tb";
 import { SiExpo } from "react-icons/si";
 import { SiVercel } from "react-icons/si";
 import { SiReactquery } from "react-icons/si";
+import { FaNode } from "react-icons/fa";
 
 export interface TechsInterface {
   id: string;
@@ -78,5 +79,10 @@ export const techs: TechsInterface[] = [
     id: "tanstack query",
     name: "Tanstack Query",
     icon: SiReactquery,
+  },
+  {
+    id: "node",
+    name: "Node",
+    icon: SiTsnode,
   }
 ];
