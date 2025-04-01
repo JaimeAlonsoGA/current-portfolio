@@ -16,8 +16,8 @@ export default function Software() {
         defaultValue="all"
         className="h-full w-full overflow-y-auto scrollbar-hide"
       >
-        <div className="sticky top-5 mt-24 flex flex-col items-center justify-end z-20 ">
-          <TabsList>
+        <div className="sticky top-5 mt-24 flex flex-col items-center justify-end z-20">
+          <TabsList className="bg-gray-50 bg-opacity-90">
             <TabsTrigger value="all">Todos</TabsTrigger>
             <TabsTrigger value="app">App</TabsTrigger>
             <TabsTrigger value="program">Solution</TabsTrigger>

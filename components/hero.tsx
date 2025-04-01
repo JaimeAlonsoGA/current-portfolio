@@ -1,5 +1,7 @@
+"use client";
 import { text } from "@/data/text";
 import Title from "./ui/title";
+import Link from "next/link";
 
 const Hero = () => {
   const description = text.current.description;
@@ -10,7 +12,18 @@ const Hero = () => {
         <p className="text-sm sm:text-left tracking-widest mb-12">
           {description}
         </p>
-        <a className="text-xs font-ligt text-blue-400 hover:underline underline-offset-2 after:content-['_↗']">alonsog.jaime@gmail.com</a>
+        <Link
+          href="/about"
+          className="text-xs font-ligt text-blue-400 hover:underline underline-offset-2 after:content-['_↗']"
+        >
+          About
+        </Link>
+        <a
+          href="mailto:alonsog.jaime@gmail.com"
+          className="text-xs font-light text-blue-400 hover:underline underline-offset-2 after:content-['_↗']"
+        >
+          alonsog.jaime@gmail.com
+        </a>
       </div>
     </div>
   );

@@ -24,7 +24,7 @@ export default async function Project({
 
   return (
     <div className="flex flex-col gap-8 h-full mt-20 items-center overflow-y-auto scrollbar-hide max-w-11/12">
-      <div className="flex flex-wrap justify-between items-start gap-4 border rounded-md p-4 mt-4 bg-white">
+      <div className="flex flex-wrap justify-between items-start gap-4 border rounded-md p-4 mt-4 bg-gray-50 bg-opacity-90">
         {project.tags.map((tag, i) => {
           const tech = techs.find((tech) => tech.id === tag);
           if (!tech) {
@@ -52,7 +52,7 @@ export default async function Project({
           />
         )}
       </div>
-      <div className="flex flex-col md:flex-row gap-12 w-1/2 border p-4 rounded-md shadow-md bg-white">
+      <div className="flex flex-col md:flex-row gap-12 w-1/2 border p-4 rounded-md shadow-md bg-gray-50 bg-opacity-90">
         <ol className="flex flex-col gap-2">
           {project.description.split("\n").map((line, index) => {
             const parts = line.split(/(\[b\].*?\[\/b\]|\[link:.*?\]\(.*?\))/g);
@@ -119,7 +119,7 @@ export default async function Project({
         ))}
       </div>
       <SeeMoreOnProject />
-      <footer className="w-full bg-white fixed bottom-0 flex flex-row justify-center gap-12 p-1">
+      <footer className="w-full bg-gray-50 fixed bottom-0 flex flex-row justify-center gap-12 p-1">
         {project.link &&
           project.link.map((link, i) => {
             return (

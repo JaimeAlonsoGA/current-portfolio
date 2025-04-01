@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <div className={`${pathname !== "/" && "hidden"} relative flex w-full font-[family-name:var(--font-geist-sans)]`}>
-      {/* <Blanket /> */}
+      <Blanket />
       <SeeMore />
     </div>
   );

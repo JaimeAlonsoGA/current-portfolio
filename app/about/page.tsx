@@ -1,83 +1,37 @@
-import { Separator } from "@/components/ui/separator";
-import Tag from "../../components/ui/tag";
+"use client";
+
 import Title from "@/components/ui/title";
-import { TimelinePhone, Timeline } from "@/components/timeline";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-} from "@/components/ui/carousel";
-import Diplomas from "@/components/diplomas";
-import Summary from "@/components/summary";
-import Skills from "@/components/skills";
-import Skill from "@/components/skills";
+import { text } from "@/data/text";
+import { useEffect, useState } from "react";
 
 export default function About() {
+  const [displayedText, setDisplayedText] = useState("");
+  const about = text.about.text;
+
+  useEffect(() => {
+    let index = 0;
+
+    const interval = setInterval(() => {
+      if (index < about.length) {
+        setDisplayedText((prev) => prev + about[index]);
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="flex flex-col gap-8 row-start-2 items-center sm:items-start justify-center max-w-full md:max-w-4xl">
-      <div className="w-full flex flex-col-reverse md:flex-row items-start md:items-end md:justify-between">
+    <div>
+      <div className="flex flex-row items-center gap-8 backdrop-blur-xl rounded-full p-4 text-white">
         <Title title="About" />
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/">Home</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>
-                <span className="font-semibold">. . .</span>
-              </BreadcrumbPage>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink href="about/qaa">Q&A</BreadcrumbLink>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
       </div>
-      <div className="w-full flex flex-wrap md:flex-row gap-2 justify-between">
-        {tags.map((tag, i) => (
-          <div key={tag} className="flex flex-row gap-2">
-            <Tag label={tag} />
-          </div>
-        ))}
+      <div className="mt-4 text-white text-sm sm:text-left tracking-widest">
+        {displayedText}
       </div>
-      <Carousel
-        opts={{ align: "start", loop: true }}
-        orientation="vertical"
-        className="hidden xl:flex"
-      >
-        <CarouselContent className="-mt-1 h-[380px]">
-          <CarouselItem>
-            <Timeline />
-          </CarouselItem>
-          {skillset.map((item, i) => (
-            <CarouselItem key={i} className="h-full flex flex-row">
-              <Skill skillset={item} />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselNext />
-      </Carousel>
-      <div className="xl:hidden flex flex-col gap-8">
-        <TimelinePhone />
-      </div>
-    </section>
+    </div>
   );
 }
 
