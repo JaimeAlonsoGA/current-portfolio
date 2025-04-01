@@ -2,10 +2,11 @@
 
 import Title from "@/components/ui/title";
 import { text } from "@/data/text";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function About() {
-  const [displayedText, setDisplayedText] = useState("");
+  const [writer, setWriter] = useState("");
   const about = text.about.text;
 
   useEffect(() => {
@@ -13,7 +14,7 @@ export default function About() {
 
     const interval = setInterval(() => {
       if (index < about.length) {
-        setDisplayedText((prev) => prev + about[index]);
+        setWriter((prev) => prev + about[index]);
         index++;
       } else {
         clearInterval(interval);
@@ -24,13 +25,14 @@ export default function About() {
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <div className="flex flex-row items-center gap-8 backdrop-blur-xl rounded-full p-4 text-white">
         <Title title="About" />
       </div>
       <div className="mt-4 text-white text-sm sm:text-left tracking-widest">
-        {displayedText}
+        {writer}
       </div>
+      <Image src="/cloud6.png" alt="Jaime Alonso" width={200} height={200} className={`${writer.length > 24 ? "flex" : "hidden"}`} />
     </div>
   );
 }

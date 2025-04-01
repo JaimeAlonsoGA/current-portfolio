@@ -52,7 +52,7 @@ export default async function Project({
           />
         )}
       </div>
-      <div className="flex flex-col md:flex-row gap-12 w-1/2 border p-4 rounded-md shadow-md bg-gray-50 bg-opacity-90">
+      <div className={`${project.tags.includes("react native") ? "md:flex-row" : "md:flex-col"} flex gap-12 w-1/2 border p-4 rounded-md shadow-md bg-gray-50 bg-opacity-90`}>  
         <ol className="flex flex-col gap-2">
           {project.description.split("\n").map((line, index) => {
             const parts = line.split(/(\[b\].*?\[\/b\]|\[link:.*?\]\(.*?\))/g);
@@ -89,19 +89,17 @@ export default async function Project({
         {project.video && (
           <div>
             <iframe
-              className="rounded-lg"
-              width="315"
-              height="560"
+              className={`rounded-lg ${project.tags.includes("react native") ? "h-[500] w-[250]" : "aspect-video w-full"}`}
               src={project.video}
               title={project.title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share allowfullscreen"
             ></iframe>
           </div>
         )}
       </div>
       <div className="flex flex-wrap gap-4 border p-4 rounded-md shadow-md">
         {project.images?.map((image, i) => (
-          <div className="flex flex-col gap-2">
+          <div key={i} className="flex flex-col gap-2">
             <Image
               key={i}
               src={image}

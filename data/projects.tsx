@@ -57,7 +57,7 @@ export const projects = [
     overview:
       "Designed and developed a custom private web system from scratch to efficiently manage and administer internal resources for CREACIONES MIRTO, S.A.",
     description:
-      "Alchimix is a mobile application currently published on the Play Store. It was a self-initiated project designed to solidify my knowledge of React Native, Expo, and the end-to-end app development lifecycle, including testing, deployment, and publication. \n I developed the app entirely on my own within a short time frame, as its primary purpose was to be a birthday gift for a close friend. Throughout the development process, I encountered numerous challenges, which I overcame through persistence and a strong motivation to see the project through to completion. \n Alchimix allows users to create a pantry, categorize ingredients, and later use them to craft cocktails, which are stored in the app as easy-to-follow recipes. The interface is intuitive, and since its launch in 2023, continuous updates—driven by user feedback—have significantly enhanced its functionality. \n Despite being developed with limited resources, Alchimix remains a solid and well-structured application. It is still in testing and continues to receive core updates to refine the user experience.",
+      "Internal Management Web System, designed and developed by Jaime Alonso for CREACIONES MIRTO S.A. Its main functions are: \n• Review active inventory, filter and export to PDF \n• Manage users and roles \n• Control production lines and new orders \n• Create packing lists (delivery notes) \n• Check phone app analytics \n• Plan and send push notifications to the phone app \n• View fabric orders and technical sheets \n• Visualize technical photography gallery. \n\nThe departments that benefited from the creation of such application were: \n✅ Human Resources \n✅ Marketing \n✅ Production \n✅ Design \n✅ Warehouse \n✅ Company Administrators",
     tags: [
       "react",
       "typescript",
@@ -69,6 +69,7 @@ export const projects = [
     images: [
       "/images/400/card1.png",
     ],
+    video: "https://www.youtube.com/embed/FYXvtEI2agk?si=VsCWdzB4bo7s97AU",
     type: "app",
     highlight: true,
   },
