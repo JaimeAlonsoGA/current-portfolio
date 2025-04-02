@@ -11,6 +11,8 @@ import { IoPhonePortraitOutline } from "react-icons/io5";
 import { RiGitRepositoryPrivateLine } from "react-icons/ri";
 
 export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
+  if (!project) return null;
+
   return (
     <div className="bg-gray-50 bg-opacity-90 group relative flex flex-row justify-between w-full p-4 rounded-md max-w-4xl h-60 gap-4">
       <div className="flex flex-col justify-between">
@@ -21,38 +23,38 @@ export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
         <div className="flex flex-row gap-4 items-center">
           {project.link?.map((link, i) => {
             if (link.label === "Private GitHub") return null;
-            else
-              return (
-                <a
-                  key={i}
-                  href={link.url}
-                  target="_blank"
-                  className="text-xs items-center flex flex-row hover:underline underline-offset-2"
-                >
-                  {link.label}
-                  {link.label === "Website" ? (
-                    <TbWorld className="inline-block ml-1" />
-                  ) : link.label === "Play Store" ? (
-                    <IoPhonePortraitOutline className="inline-block ml-1" />
-                  ) : link.label === "App Store" ? (
-                    <FaAppStore className="inline-block ml-1 " />
-                  ) : link.label === "GitHub" ? (
-                    <FiGithub className="inline-block ml-1" />
-                  ) : null}
-                </a>
-              );
+            return (
+              <a
+                key={i}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs items-center flex flex-row hover:underline underline-offset-2"
+              >
+                {link.label}
+                {link.label === "Website" ? (
+                  <TbWorld className="inline-block ml-1" />
+                ) : link.label === "Play Store" ? (
+                  <IoPhonePortraitOutline className="inline-block ml-1" />
+                ) : link.label === "App Store" ? (
+                  <FaAppStore className="inline-block ml-1 " />
+                ) : link.label === "GitHub" ? (
+                  <FiGithub className="inline-block ml-1" />
+                ) : null}
+              </a>
+            );
           })}
           {project.link &&
             project.link.some((link) => link.label === "Private GitHub") && (
-              <p className="text-xs items-center flex flex-row hover:line-through ">
+              <p className="text-xs items-center flex flex-row hover:line-through">
                 Private GitHub
                 <RiGitRepositoryPrivateLine className="inline-block ml-1" />
               </p>
             )}
         </div>
-        <div className="flex flex-col gap-2 text-sm ">
+        <div className="flex flex-col gap-2 text-sm">
           <div className="flex flex-wrap gap-2">
-            {project.tags.sort().map((tag, i) => (
+            {project.tags?.sort().map((tag, i) => (
               <Badge variant={"default"} key={i}>
                 {tag}
               </Badge>
@@ -60,7 +62,7 @@ export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
           </div>
           <Link
             href={`./projects/${project.id}`}
-            className="text-xs text-blue-500 hover:underline underline-offset-2  after:content-['_↗']"
+            className="text-xs text-blue-500 hover:underline underline-offset-2 after:content-['_↗']"
           >
             Conocer más
           </Link>
@@ -69,26 +71,19 @@ export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
       {(project.images?.[0] || project.logo) && (
         <Image
           src={project.images?.[0] ?? project.logo ?? ""}
-          alt={project.title}
+          alt={project.title || "Project image"}
           width={project.images?.[0]?.includes("card") ? 400 : 120}
           height={0}
           className="rounded-md hidden md:flex aspect-[16/9]"
           loading="lazy"
         />
       )}
-      {/* {project.highlight && (
-        <Badge
-          className="absolute top-2 right-2 group-hover:animate-pulse"
-          variant={"default"}
-        >
-          <FaStar />
-        </Badge>
-      )} */}
     </div>
   );
 };
 
 export const HeroProjectCard: React.FC<ProjectProps> = ({ project }) => {
+  if (!project) return null;
   return (
     <div className="bg-gray-50 bg-opacity-80 group relative flex flex-row justify-between w-full p-4 rounded-md shadow-xl max-w-4xl h-60 gap-4">
       <div className="flex flex-col justify-between">
