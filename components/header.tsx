@@ -1,34 +1,15 @@
-"use client";
-
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
-import { IoIosArrowRoundBack } from "react-icons/io";
+import Arrow from "./layout/arrow";
 
 const Header: React.FC = () => {
-  const pathname = usePathname()
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) return null;
-
-  const isHome = pathname === "/";
-
   return (
     <div
       className={`absolute backdrop-blur-lg z-10 flex flex-row w-full top-0 justify-center items-center py-6 font-[family-name:var(--font-geist-sans)]`}
     >
-      {!isHome && (<Link href={"/"} className="absolute left-5">
-        <IoIosArrowRoundBack color={"white"} size={"24"} />
-      </Link>)}
+      <Arrow />
       <a
         className="text-white font-light flex items-center gap-2 hover:underline hover:underline-offset-4"
         href="https://www.linkedin.com/in/jaime360/"
         target="_blank"
-        rel="noopener noreferrer"
       >
         LinkedIn
       </a>

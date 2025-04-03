@@ -1,5 +1,3 @@
-"use client";
-
 import { Badge } from "./ui/badge";
 import Link from "next/link";
 import { ProjectProps } from "@/data/projects";
@@ -11,8 +9,6 @@ import { IoPhonePortraitOutline } from "react-icons/io5";
 import { RiGitRepositoryPrivateLine } from "react-icons/ri";
 
 export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
-  if (!project) return null;
-
   return (
     <div className="bg-gray-50 bg-opacity-90 group relative flex flex-row justify-between w-full p-4 rounded-md max-w-4xl h-60 gap-4">
       <div className="flex flex-col justify-between">
@@ -52,7 +48,7 @@ export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
               </p>
             )}
         </div>
-        <div className="flex flex-col gap-2 text-sm">
+        <div className="flex flex-col gap-3 text-sm">
           <div className="flex flex-wrap gap-2">
             {project.tags?.sort().map((tag, i) => (
               <Badge variant={"default"} key={i}>
@@ -64,7 +60,7 @@ export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
             href={`./projects/${project.id}`}
             className="text-xs text-blue-500 hover:underline underline-offset-2 after:content-['_↗']"
           >
-            Conocer más
+            Read more
           </Link>
         </div>
       </div>
@@ -83,7 +79,6 @@ export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
 };
 
 export const HeroProjectCard: React.FC<ProjectProps> = ({ project }) => {
-  if (!project) return null;
   return (
     <div className="bg-gray-50 bg-opacity-80 group relative flex flex-row justify-between w-full p-4 rounded-md shadow-xl max-w-4xl h-60 gap-4">
       <div className="flex flex-col justify-between">
