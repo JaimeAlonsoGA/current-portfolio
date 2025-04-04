@@ -13,7 +13,7 @@ const Background = () => {
 
   return (
     <>
-      <div className="absolute inset-0 -z-10 bg-cover bg-center">
+      <div className="absolute inset-0 -z-10 bg-cover bg-center h-full">
         <Image
           src="/bg.webp"
           alt="Background"
@@ -24,9 +24,11 @@ const Background = () => {
       </div>
       {isMounted && (
         <motion.div
-          className="absolute inset-0 -z-10 bg-cover bg-center"
+          className="absolute inset-0 -z-10 bg-cover bg-center h-full"
           style={{
             backgroundImage: "url('/bg.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
           initial={{ backgroundPosition: "50% 50%" }}
           animate={{ backgroundPosition: ["50% 50%", "55% 45%", "50% 50%"] }}
