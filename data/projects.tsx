@@ -41,7 +41,7 @@ export const projects = [
         label: "Play Store",
       },
       {
-        url: "https://mirto.com",
+        url: "https://apps.apple.com/us/app/mirto/id6743855760",
         label: "App Store",
       },
     ],

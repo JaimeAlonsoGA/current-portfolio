@@ -7,7 +7,6 @@ import { TbWorld } from "react-icons/tb";
 import { FaAppStore } from "react-icons/fa";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { RiGitRepositoryPrivateLine } from "react-icons/ri";
-import { StarIcon } from "lucide-react";
 
 export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
   return (
@@ -75,11 +74,11 @@ export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
           loading="lazy"
         />
       )}
-      {project.highlight && (
-        <div className="absolute top-4 right-4">
+      {/* {project.highlight && (
+        <div className="absolute top-2 right-2">
           <StarIcon size={10}/>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

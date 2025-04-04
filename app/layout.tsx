@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Jaime Alonso",
-  description: "Sound Design and Music Production Portfolio",
+  description: "Jaime Alonso Software Portfolio",
 };
 
 export default function RootLayout({

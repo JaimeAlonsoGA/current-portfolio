@@ -13,18 +13,19 @@ const Background = () => {
 
   return (
     <>
-      <div className="absolute inset-0 -z-10 bg-cover bg-center h-full">
+      <div className="absolute inset-0 -z-10 w-full  bg-cover bg-center min-h-full">
         <Image
           src="/bg.webp"
           alt="Background"
           layout="fill"
           objectFit="cover"
+          fill
           priority
         />
       </div>
       {isMounted && (
         <motion.div
-          className="absolute inset-0 -z-10 bg-cover bg-center h-full"
+          className="absolute inset-0 -z-10 w-full bg-cover bg-center min-h-full"
           style={{
             backgroundImage: "url('/bg.webp')",
             backgroundSize: "cover",
