@@ -9,6 +9,14 @@ import { FaAppStore } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { TbWorld } from "react-icons/tb";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export default async function Project({
   params,
@@ -31,7 +39,10 @@ export default async function Project({
             return null;
           }
           return (
-            <div className="flex md:flex-row flex-col gap-2 items-center" key={i}>
+            <div
+              className="flex md:flex-row flex-col gap-2 items-center"
+              key={i}
+            >
               {tech ? <tech.icon key={i + tag} /> : null}
               <Badge variant={"default"} key={i}>
                 {tech.name}
@@ -53,10 +64,18 @@ export default async function Project({
             />
           )}
         </div>
-        <div className={`${project.tags.includes("react native") ? "md:flex-row" : "md:flex-col"} flex gap-12 max-w-4xl border p-4 rounded-md shadow-md bg-gray-50 bg-opacity-90`}>
+        <div
+          className={`${
+            project.tags.includes("react native")
+              ? "md:flex-row"
+              : "md:flex-col"
+          } flex gap-12 max-w-4xl border p-4 rounded-md shadow-md bg-gray-50 bg-opacity-90`}
+        >
           <ol className="flex flex-col gap-3 text-sm">
             {project.description.split("\n").map((line, index) => {
-              const parts = line.split(/(\[b\].*?\[\/b\]|\[link:.*?\]\(.*?\))/g);
+              const parts = line.split(
+                /(\[b\].*?\[\/b\]|\[link:.*?\]\(.*?\))/g
+              );
 
               return (
                 <li key={index} className="text-justify">
@@ -90,7 +109,11 @@ export default async function Project({
           {project.video && (
             <div>
               <iframe
-                className={`rounded-lg ${project.tags.includes("react native") ? "h-[500] w-[250]" : "aspect-video w-full"}`}
+                className={`rounded-lg ${
+                  project.tags.includes("react native")
+                    ? "h-[500] w-[250]"
+                    : "aspect-video w-full"
+                }`}
                 src={project.video}
                 title={project.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share allowfullscreen"
@@ -98,25 +121,44 @@ export default async function Project({
             </div>
           )}
         </div>
-        {project.images && <div className="w-full flex flex-wrap justify-around gap-4 p-4 rounded-md">
-          {project.images?.map((image, i) => (
-            <div key={i} className="flex flex-col gap-2">
-              <Image
-                key={i}
-                src={image}
-                alt={`image of ${project.title} project`}
-                className="rounded-lg"
-                width={200}
-                height={100}
-              />
-              <p className="text-xs italic text-center text-white">
-                {image.includes("figma")
-                  ? "Design on Figma"
-                  : "Application screen"}
-              </p>
-            </div>
-          ))}
-        </div>}
+        {project.images && (
+          <div className="w-full flex flex-wrap justify-around gap-4 p-4 rounded-md">
+            {project.images?.map((image, i) => (
+              <div key={i} className="flex flex-col gap-2">
+                <Dialog>
+                  <DialogTrigger>
+                    <Image
+                      key={i}
+                      src={image}
+                      alt={`image of ${project.title} project`}
+                      className="rounded-lg"
+                      width={200}
+                      height={200}
+                    />
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[425px] max-w-[90vw]">
+                    <DialogHeader>
+                      <DialogTitle>{project.title}</DialogTitle>
+                    </DialogHeader>
+                    <Image
+                      key={i}
+                      src={image}
+                      alt={`image of ${project.title} project`}
+                      className="rounded-lg"
+                      width={1000}
+                      height={1000}
+                    />
+                  </DialogContent>
+                </Dialog>
+                <p className="text-xs italic text-center text-white">
+                  {image.includes("figma")
+                    ? "Design on Figma"
+                    : "Application screen"}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
         <SeeMoreOnProject />
         <footer className="w-full bg-gray-50 fixed bottom-0 flex flex-row justify-center gap-12 p-1">
           {project.link &&

@@ -2,7 +2,6 @@
 
 import Title from "@/components/ui/title";
 import { text } from "@/data/text";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function About() {

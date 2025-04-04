@@ -2,7 +2,7 @@ import Arrow from "./layout/arrow";
 
 const Header: React.FC = () => {
   return (
-    <div
+    <header
       className={`absolute backdrop-blur-lg z-10 flex flex-row w-full top-0 justify-center items-center py-6 font-[family-name:var(--font-geist-sans)]`}
     >
       <Arrow />
@@ -13,7 +13,7 @@ const Header: React.FC = () => {
       >
         LinkedIn
       </a>
-    </div>
+    </header>
   );
 };
 

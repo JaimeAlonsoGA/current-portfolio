@@ -9,10 +9,10 @@ const Footer = () => {
   console.log(pathname)
 
   return (
-    <div className={`${pathname !== "/" && "hidden"} relative flex w-full font-[family-name:var(--font-geist-sans)]`}>
+    <footer className={`${pathname !== "/" && "hidden"} relative flex w-full font-[family-name:var(--font-geist-sans)]`}>
       <Blanket />
       <SeeMore />
-    </div>
+    </footer>
   );
 };
 
