@@ -1,3 +1,4 @@
+import GalleryImage from "@/components/gallery";
 import { SeeMoreOnProject } from "@/components/seeMore";
 import { Badge } from "@/components/ui/badge";
 import Title from "@/components/ui/title";
@@ -9,14 +10,6 @@ import { FaAppStore } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { TbWorld } from "react-icons/tb";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-
 export default async function Project({
   params,
 }: {
@@ -31,7 +24,7 @@ export default async function Project({
 
   return (
     <div className="w-full flex flex-col h-full items-center overflow-y-auto scrollbar-hide">
-      <div className="mt-24 mb-6 md:z-20 md:sticky top-5 flex md:flex-row flex-wrap justify-between items-start gap-4 border rounded-md p-2 bg-gray-50 bg-opacity-90 max-w-full">
+      <div className="mt-24 mb-6 md:z-20 md:sticky top-5 flex md:flex-row flex-wrap justify-around md:justify-between items-start gap-4 border rounded-md p-2 bg-gray-50 bg-opacity-90 max-w-full">
         {project.tags.map((tag, i) => {
           const tech = techs.find((tech) => tech.id === tag);
           if (!tech) {
@@ -66,8 +59,8 @@ export default async function Project({
         <div
           className={`${
             project.tags.includes("react native")
-              ? "md:flex-row"
-              : "md:flex-col"
+              ? "flex-col sm:flex-row"
+              : "flex-col"
           } flex gap-12 max-w-4xl border p-4 rounded-md shadow-md bg-gray-50 bg-opacity-90`}
         >
           <ol className="flex flex-col gap-3 text-sm">
@@ -77,7 +70,7 @@ export default async function Project({
               );
 
               return (
-                <li key={index} className="text-justify">
+                <li key={index} className="text-pretty">
                   {parts.map((part, index) => {
                     if (part.startsWith("[b]") && part.endsWith("[/b]")) {
                       return <strong key={index}>{part.slice(3, -4)} </strong>;
@@ -106,7 +99,7 @@ export default async function Project({
             })}
           </ol>
           {project.video && (
-            <div>
+            <div className="flex justify-center">
               <iframe
                 className={`rounded-lg ${
                   project.tags.includes("react native")
@@ -123,45 +116,21 @@ export default async function Project({
         {project.images && (
           <div className="w-full flex flex-wrap justify-around gap-4 p-4 rounded-md">
             {project.images?.map((image, i) => (
-              <div key={i} className="flex flex-col gap-2">
-                <Dialog>
-                  <DialogTrigger>
-                    <Image
-                      key={i}
-                      src={image}
-                      alt={`image of ${project.title} project`}
-                      className="rounded-lg"
-                      width={200}
-                      height={200}
-                    />
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-[425px] max-w-[90vw]">
-                    <DialogHeader>
-                      <DialogTitle>{project.title}</DialogTitle>
-                    </DialogHeader>
-                    <Image
-                      key={i}
-                      src={image}
-                      alt={`image of ${project.title} project`}
-                      className="rounded-lg"
-                      width={1000}
-                      height={1000}
-                    />
-                  </DialogContent>
-                </Dialog>
-                <p className="text-xs italic text-center text-white">
-                  {image.includes("figma")
-                    ? "Design on Figma"
-                    : "Application screen"}
-                </p>
-              </div>
+              <React.Fragment key={i}>
+                <GalleryImage
+                  title={project.title}
+                  image={image}
+                  index={i}
+                  isPhone={project.tags.includes("react native")}
+                />
+              </React.Fragment>
             ))}
           </div>
         )}
         <SeeMoreOnProject />
-        <footer className="w-full bg-gray-50 fixed bottom-0 flex flex-row justify-center gap-12 p-1">
-          {project.link &&
-            project.link.map((link, i) => {
+        {project.link && (
+          <footer className="w-full bg-gray-50 fixed bottom-0 flex flex-row justify-center gap-12 p-1">
+            {project.link.map((link, i) => {
               return (
                 <a
                   key={i}
@@ -182,7 +151,8 @@ export default async function Project({
                 </a>
               );
             })}
-        </footer>
+          </footer>
+        )}
       </div>
     </div>
   );

@@ -10,6 +10,7 @@ const Arrow = () => {
     const pathname = usePathname()
     const [isMounted, setIsMounted] = useState(false);
     const isHome = pathname === "/";
+    const isProject = pathname.includes("/projects/");
 
     useEffect(() => {
         setIsMounted(true);
@@ -17,10 +18,9 @@ const Arrow = () => {
 
     if (!isMounted) return null;
     return (
-        !isHome && (<Link href={"/"} className="absolute left-5">
+        !isHome && (<Link href={isProject ? "/projects" : "/"} className="absolute left-5">
             <IoIosArrowRoundBack color={"white"} size={"24"} />
         </Link>)
-
     )
 }
 

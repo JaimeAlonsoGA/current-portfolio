@@ -100,7 +100,7 @@ export const projects = [
     overview:
       "designed and developed a phone app to create custom cocktails with no limits.",
     description:
-      "Alchimix is a [b]phone app[/b] currently published on the [link:Google Play](https://play.google.com/store/apps/details?id=com.sonicode.coctelapp&pcampaignid=web_share).\nIts purpose was to consolidate my knowledge of React Native, Expo, and the [b]end-to-end app development cycle,[/b] including [b]testing[/b] and [b]deployment.[/b] On top of that, the app was a [b]friend's birthday present.[/b]\n\n Alchimix allows users to: \n• create a [b]pantry[/b] \n• categorize [b]ingredients[/b] \n• craft [b]cocktails.[/b] \n• Read easy-to-follow [b]recipes[/b] \n\nThe interface is intuitive, and since its launch in 2023, [b]continuous updates—driven by user feedback[/b]—have significantly enhanced its functionality. \n Despite being developed with [b]limited resources,[/b] Alchimix remains a solid and [b]well-structured application.[/b] It is still in [b]testing[/b] and continues to receive [b]core updates[/b] to refine the user experience. The version control is managed with [link:GitHub](https://github.com/JaimeAlonsoGA/alchimix). \n Alchimix was built using [b]JavaScript with Node.js.[/b] Cocktail recipes are stored using the [b]operating system’s native storage,[/b] ensuring [b]seamless performance and accessibility.[/b] To enhance the visual experience, a [b]professional designer[/b] was hired to create the app’s artwork and icons.",
+      "Alchimix is a [b]phone app[/b] currently published on the [link:Google Play](https://play.google.com/store/apps/details?id=com.sonicode.coctelapp&pcampaignid=web_share).\nIts purpose was to consolidate my knowledge of the [b]end-to-end app development cycle,[/b] including [b]testing[/b] and [b]deployment.[/b] On top of that, the app was a [b]friend's birthday present.[/b]\n\n Alchimix allows users to: \n• create a [b]pantry[/b] \n• categorize [b]ingredients[/b] \n• craft [b]cocktails.[/b] \n• Read easy-to-follow [b]recipes[/b] \n\n✅ The interface is intuitive\n✅ Its active users enjoy using it and give valuable feedback \n✅ This project has fulfilled its purpose and remains a fun and - unexpectedly - useful application.",
     tags: ["react native", "javascript", "expo", "figma"],
     logo: "/images/alchimix/logo.webp",
     link: [
@@ -175,7 +175,7 @@ export const projects = [
     id: "musickeyboard",
     title: "Musickeyboard.io",
     overview: "A simple music keyboard to play with",
-    description: "Summer is long and sometimes you just want to play the keys on your laptop keyboard to get some inspiration at night. \n\nThat is why I created musickeyboard.io, with some features: \n• Easy to use [b]keyboard web[/b]\n• [b]8 octaves[/b], just like a [b]real piano[/b] \n• A lot of [b]customization[/b] options to get inspired \n• [b]Chord tracker[/b] \n\n ✅ Its sound is terrible, I know...but it is still cool!",
+    description: "Summer is long and sometimes you just want to play the keys on your laptop keyboard to get some inspiration at night. \n\nThat is why I created musickeyboard.io, with some features: \n• Easy to use [b]keyboard web[/b]\n• [b]8 octaves[/b], just like a [b]real piano[/b] \n• A lot of [b]customization[/b] options to get inspired \n• [b]Chord tracker[/b] \n\n ✅ Still recibing core sound fix updates.",
     tags: ["react", "javascript", "tailwindcss"],
     link: [
       {

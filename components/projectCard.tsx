@@ -7,11 +7,12 @@ import { TbWorld } from "react-icons/tb";
 import { FaAppStore } from "react-icons/fa";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { RiGitRepositoryPrivateLine } from "react-icons/ri";
+import { StarIcon } from "lucide-react";
 
 export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
   return (
-    <div className="bg-gray-50 bg-opacity-90 group relative flex flex-row justify-between w-full p-4 rounded-md max-w-4xl h-60 gap-4">
-      <div className="flex flex-col justify-between">
+    <div className="bg-gray-50 bg-opacity-90 group relative flex flex-row justify-between w-full p-4 rounded-md max-w-4xl h-60 gap-4 overflow-y-auto scrollbar-hide">
+      <div className="flex flex-col justify-between min-gap-4">
         <div className="flex flex-col gap-2">
           <h1 className="font-semibold text-xl">{project.title}</h1>
           <h2 className="text-sm">{project.overview}</h2>
@@ -49,7 +50,7 @@ export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
             )}
         </div>
         <div className="flex flex-col gap-3 text-sm">
-          <div className="flex flex-wrap gap-2">
+          <div className="flex-wrap gap-2 hidden sm:flex">
             {project.tags?.sort().map((tag, i) => (
               <Badge variant={"default"} key={i}>
                 {tag}
@@ -70,9 +71,14 @@ export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
           alt={project.title || "Project image"}
           width={project.images?.[0]?.includes("card") ? 400 : 120}
           height={0}
-          className="rounded-md hidden md:flex aspect-[16/9]"
+          className={`rounded-md hidden sm:flex aspect-[16/9]`}
           loading="lazy"
         />
+      )}
+      {project.highlight && (
+        <div className="absolute top-4 right-4">
+          <StarIcon size={10}/>
+        </div>
       )}
     </div>
   );
@@ -84,7 +90,7 @@ export const HeroProjectCard: React.FC<ProjectProps> = ({ project }) => {
       <div className="flex flex-col justify-between">
         <div className="flex flex-col gap-2">
           <h1 className="font-semibold text-xl">{project.title}</h1>
-          <h2 className="text-sm">{project.overview}</h2>
+          <h2 className="text-xs md:text-sm flex">{project.overview}</h2>
         </div>
         <div className="flex flex-row gap-4 items-center">
           {project.link?.map((link, i) => {
@@ -95,23 +101,23 @@ export const HeroProjectCard: React.FC<ProjectProps> = ({ project }) => {
                   key={i}
                   href={link.url}
                   target="_blank"
-                  className="text-xs items-center flex flex-row hover:underline underline-offset-2"
+                  className="text-xs items-center flex flex-row hover:underline underline-offset-2 after:content-['_↗'] sm:after:content-none"
                 >
                   {link.label}
                   {link.label === "Website" ? (
-                    <TbWorld className="inline-block ml-1" />
+                    <TbWorld className="ml-1 hidden sm:flex" />
                   ) : link.label === "Play Store" ? (
-                    <IoPhonePortraitOutline className="inline-block ml-1" />
+                    <IoPhonePortraitOutline className="ml-1 hidden sm:flex" />
                   ) : link.label === "App Store" ? (
-                    <FaAppStore className="inline-block ml-1 " />
+                    <FaAppStore className="ml-1 hidden sm:flex" />
                   ) : link.label === "GitHub" ? (
-                    <FiGithub className="inline-block ml-1" />
+                    <FiGithub className="ml-1 hidden sm:flex" />
                   ) : null}
                 </a>
               );
           })}
         </div>
-        <div className="flex flex-col gap-2 text-sm ">
+        <div className="flex-col gap-2 text-sm hidden sm:flex">
           <div className="flex flex-wrap gap-2">
             {project.tags.sort().map((tag, i) => (
               <Badge variant={"default"} key={i}>
@@ -127,18 +133,12 @@ export const HeroProjectCard: React.FC<ProjectProps> = ({ project }) => {
           alt={project.title}
           width={project.images?.[0]?.includes("card") ? 400 : 100}
           height={0}
-          className="rounded-md hidden md:flex aspect-[16/9]"
+          className={`rounded-md flex aspect-[16/9] ${
+            project.images?.[0]?.includes("card") && "hidden sm:flex"
+          }`}
           loading="lazy"
         />
       )}
-      {/* {project.highlight && (
-    <Badge
-      className="absolute top-2 right-2 group-hover:animate-pulse"
-      variant={"default"}
-    >
-      <FaStar />
-    </Badge>
-  )} */}
     </div>
   );
 };
