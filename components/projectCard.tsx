@@ -4,7 +4,7 @@ import { ProjectProps } from "@/data/projects";
 import Image from "next/image";
 import { FiGithub } from "react-icons/fi";
 import { TbWorld } from "react-icons/tb";
-import { FaAppStore, FaStar } from "react-icons/fa";
+import { FaAppStore } from "react-icons/fa";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { RiGitRepositoryPrivateLine } from "react-icons/ri";
 

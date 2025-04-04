@@ -21,7 +21,7 @@ export default function About() {
     }, 50);
 
     return () => clearInterval(interval);
-  }, []);
+  });
 
   return (
     <div className="flex flex-col items-center">
@@ -33,54 +33,4 @@ export default function About() {
       </div>
     </div>
   );
-}
-
-const tags = [
-  "Software",
-  "Applications",
-  "Cross-platform",
-  "Sound Design",
-  "Music Production",
-  "Interactive Media",
-];
-
-const skillset = [
-  {
-    field: "Software",
-    skills: [
-      "Develope end-to-end cross-platform apps —web, phone, desktop",
-      "Design modern, responsive and user-friendly apps",
-      "Create software solutions usign modern flows",
-    ],
-    keywords: [
-      "Full-stack",
-      "Cross-platform apps",
-      "UX",
-      "Solutions",
-      "Development",
-    ],
-    about: "De-coding the future with the lastest techs",
-  },
-  {
-    field: "Audio",
-    skills: [
-      "Compose, record, mix and master multi-purpose music",
-      "Design sound effects and atmospheres",
-      "Implement dynamic audio into interactive media",
-    ],
-    keywords: [
-      "Sound design",
-      "Video games",
-      "Music production",
-      "Sound engineering",
-    ],
-    about: "adios",
-  },
-] as Skillset[];
-
-export interface Skillset {
-  field: string;
-  skills: string[];
-  keywords: string[];
-  about: string;
 }
