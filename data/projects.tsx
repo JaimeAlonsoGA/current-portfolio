@@ -26,7 +26,7 @@ export const projects = [
     overview:
       "Designed and developed a phone app for MIRTO® with a complete push notification system.",
     description:
-      "[b]The MIRTO Official App[/b] is a [b]luxury fashion retail application.[/b] It was commissioned by [b]MIRTO Corporation[/b] as an extension of its online Shopify store, [link:mirto.com](https://mirto.com).\n[b]I was responsible for the complete design, development, and publication of the app,[/b] including the [b]backend[/b] and the [b]push notification system.[/b]\nIt integrates multiple services such as [b]Firestore, Firebase Cloud Functions, and Cloud Scheduler.[/b] Additionally, a [b]private external notification management app[/b] was developed for MIRTO employees, allowing them to [b]schedule and send notifications[/b] to all devices.\n\n✅ The app is [b]fully optimized[/b] for both [b]iOS and Android,[/b] ensuring a seamless experience across both operative systems.",
+      "[b]The MIRTO Official App[/b] is a [b]luxury fashion retail application.[/b] It was commissioned by [b]MIRTO Corporation[/b] as an extension of its online Shopify store, [link:mirto.com](https://mirto.com).\n[b]I was responsible for the complete design, development, and publication of the app,[/b] including the [b]backend[/b] and the [b]push notification system.[/b]\nIt integrates multiple services such as [b]Firestore, Firebase Cloud Functions, and Cloud Scheduler.[/b] Additionally, a [b]private external notification management app[/b] was developed for MIRTO employees, allowing them to [b]schedule and send notifications[/b] to all devices. It can be found on both [link:Google Play](https://play.google.com/store/apps/details?id=com.mirto.shop&hl=es) and [link:Apple Store](https://apps.apple.com/us/app/mirto/id6743855760)\n\n✅ The app is [b]fully optimized[/b] for both [b]iOS and Android,[/b] ensuring a seamless experience across both operative systems.",
     tags: [
       "typescript",
       "react native",
@@ -100,7 +100,7 @@ export const projects = [
     overview:
       "designed and developed a phone app to create custom cocktails with no limits.",
     description:
-      "Alchimix is a [b]phone app[/b] currently published on the [link:Google Play](https://play.google.com/store/apps/details?id=com.sonicode.coctelapp&pcampaignid=web_share).\nIts purpose was to consolidate my knowledge of the [b]end-to-end app development cycle,[/b] including [b]testing[/b] and [b]deployment.[/b] On top of that, the app was a [b]friend's birthday present.[/b]\n\n Alchimix allows users to: \n• create a [b]pantry[/b] \n• categorize [b]ingredients[/b] \n• craft [b]cocktails.[/b] \n• Read easy-to-follow [b]recipes[/b] \n\n✅ The interface is intuitive\n✅ Its active users enjoy using it and give valuable feedback \n✅ This project has fulfilled its purpose and remains a fun and - unexpectedly - useful application.",
+      "Alchimix is a [b]phone app[/b] currently published on the [link:Google Play](https://play.google.com/store/apps/details?id=com.sonicode.coctelapp&pcampaignid=web_share).\nIts purpose was to consolidate my knowledge of the [b]end-to-end app development cycle,[/b] including [b]testing[/b] and [b]deployment.[/b] On top of that, the app was a [b]friend's birthday present.[/b]\n\n Alchimix allows users to: \n• Create a [b]pantry[/b] \n• Categorize [b]ingredients[/b] \n• Craft [b]cocktails.[/b] \n• Read easy-to-follow [b]recipes[/b] \n\n✅ The interface is intuitive\n✅ Its active users enjoy using it and give valuable feedback \n✅ This project has fulfilled its purpose and remains a fun and - unexpectedly - useful application.",
     tags: ["react native", "javascript", "expo", "figma"],
     logo: "/images/alchimix/logo.webp",
     link: [
@@ -130,7 +130,7 @@ export const projects = [
     overview:
       "Designed and developed a phone app hand-by-hand with a biologist to help study the visu exam",
     description:
-      "The Visu is a public exam that biologists take to qualify as teachers for public schools. The exam focuses on studying the Latin names of living organisms, with an emphasis on identifying and understanding different parts of those organisms.\n\nIt functions are: \n• [b]Simulate[/b] a [b]real Visu exam[/b] \n• [b]Search[/b] categorized [b]species[/b] \n• [b]Practice[/b] with [b]categories[/b] independantly \n• Display [b]various pictures[/b] of one specie \n\n✅ The app was developed in collaboration with a biologist.",
+      "The Visu is a public exam that biologists take to qualify as teachers for public schools. The exam focuses on studying the Latin names of living organisms, with an emphasis on identifying and understanding different parts of those organisms.\n\nIt functions are: \n• [b]Simulate[/b] a [b]real Visu exam[/b] \n• [b]Search[/b] categorized [b]species[/b] \n• [b]Practice[/b] with [b]categories[/b] independantly \n• Display [b]various pictures[/b] of one specie. It was not published yet since the app is still not finished but the code can be found on [link:GitHub](https://github.com/JaimeAlonsoGA/bio-visu). \n\n✅ The app was developed in collaboration with a biologist.",
     tags: ["javascript", "react native", "expo", "figma"],
     link: [
       {
@@ -152,7 +152,7 @@ export const projects = [
     overview:
       "developed the landing page for Vivilife, an app for coaches and communities",
     description:
-      "Vivilife is a [b]project[/b] of [link:Klajdi Beqiraj](https://www.linkedin.com/in/klajdi-beqiraj-1998-leven/) and [link:Gonzalo Alonso](https://www.linkedin.com/in/galonsog/) dedicated to building a [b]dynamic space for coaches and communities[/b]. \n\n✅ The landing page was [b]successfully launched[/b] before the startup was [b]presented to inverstors.[/b]",
+      "Vivilife is a [b]project[/b] of [link:Klajdi Beqiraj](https://www.linkedin.com/in/klajdi-beqiraj-1998-leven/) and [link:Gonzalo Alonso](https://www.linkedin.com/in/galonsog/) dedicated to building a [b]dynamic space for coaches and communities[/b]. I was the responsable of creating the [b]landing page.[/b] \n\n✅ The web was [b]successfully launched[/b] before the startup was [b]presented to inverstors.[/b]",
     tags: ["react", "tailwindcss"],
     link: [
       {
@@ -175,7 +175,7 @@ export const projects = [
     id: "musickeyboard",
     title: "Musickeyboard.io",
     overview: "A simple music keyboard to play with",
-    description: "Summer is long and sometimes you just want to play the keys on your laptop keyboard to get some inspiration at night. \n\nThat is why I created musickeyboard.io, with some features: \n• Easy to use [b]keyboard web[/b]\n• [b]8 octaves[/b], just like a [b]real piano[/b] \n• A lot of [b]customization[/b] options to get inspired \n• [b]Chord tracker[/b] \n\n ✅ Still recibing core sound fix updates.",
+    description: "Summer is long and sometimes you just want to play the keys on your laptop keyboard to get some inspiration at night. \n\nThat is why I created [link:musickeyboard.io](https://musickeyboard.web.app) , with some features: \n• Easy to use [b]keyboard web[/b]\n• [b]8 octaves[/b], just like a [b]real piano[/b] \n• A lot of [b]customization[/b] options to get inspired \n• [b]Chord tracker[/b] \n\n ✅ Still recibing core sound fix updates.",
     tags: ["react", "javascript", "tailwindcss"],
     link: [
       {
@@ -198,7 +198,7 @@ export const projects = [
     id: "jaime360",
     title: "Jaime360",
     overview: "My old portfolio, a bit too much creative",
-    description: "When I started creating webs I had some experience with sound design and videogame audio so I created a portfolio to showcase both skills, software and audio. \n\n• This web is [b]deprecated[/b]\n\n✅ Creating it settled the foundations of my knowledge of [b]Firebase Hosting[/b]",
+    description: "When I started creating webs I had some experience with sound design and videogame audio so I created a portfolio to showcase both skills, software and audio. \n\n• This web is [b]deprecated[/b]\n\n✅ Creating it settled the foundations of my knowledge of [b]Firebase Hosting:[/b] [link: website](https://jaime360.web.app)",
     tags: ["react", "javascript", "tailwindcss", "firebase"],
     link: [
       {
@@ -211,10 +211,10 @@ export const projects = [
       },
     ],
     images: [
+      "/images/jaime360/card4.webp",
       "/images/jaime360/card1.webp",
       "/images/jaime360/card2.webp",
       "/images/jaime360/card3.webp",
-      "/images/jaime360/card4.webp",
     ],
     type: "web",
   },
@@ -222,7 +222,7 @@ export const projects = [
     id: "elboske",
     title: "Mixing studio website",
     overview: "Designed and developed a website for a music studio in Madrid",
-    description: "El Boske Mixing Studio is my own music studio in Madrid, Spain. I wanted to create a website to present my work and the services of the studio. \n\n• The web is [b]fully responsive[/b] and [b]optimized for SEO.[/b] \n• It has a [b]mailing automated system[/b] \n\n ✅ The site fulfills its purpose.",
+    description: "El Boske Mixing Studio is my own music studio in Madrid, Spain. I wanted to create a website to present my work and the services of the studio \n\n• The web is [b]fully responsive[/b] and [b]optimized for SEO[/b] \n• It has a [b]mailing automated system[/b] \n\n ✅ The site fulfills its purpose.",
     tags: ["react", "javascript", "tailwindcss", "firebase"],
     link: [
       {

@@ -108,7 +108,7 @@ export default async function Project({
                 }`}
                 src={project.video}
                 title={project.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share allowfullscreen"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; allowfullscreen;"
               ></iframe>
             </div>
           )}
