@@ -74,6 +74,17 @@ export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
           loading="lazy"
         />
       )}
+      {project.icon && (
+        <div className="sm:hidden flex">
+          <Image
+            src={project.icon}
+            alt={`logo of ${project.title} project`}
+            width={150}
+            height={0}
+            className="rounded-md sm:hidden flex aspect-square min-w-16"
+          />
+        </div>
+      )}
       {/* {project.highlight && (
         <div className="absolute top-2 right-2">
           <StarIcon size={10}/>
@@ -100,7 +111,7 @@ export const HeroProjectCard: React.FC<ProjectProps> = ({ project }) => {
                   key={i}
                   href={link.url}
                   target="_blank"
-                  className="text-xs items-center flex flex-row hover:underline underline-offset-2 after:content-['_↗'] sm:after:content-none"
+                  className="text-xs items-center flex flex-row hover:underline underline-offset-2"
                 >
                   {link.label}
                   {link.label === "Website" ? (
