@@ -64,9 +64,9 @@ export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
           </Link>
         </div>
       </div>
-      {(project.images?.[0] || project.logo) && (
+      {(project.images?.[0] || project.icon) && (
         <Image
-          src={project.images?.[0] ?? project.logo ?? ""}
+          src={project.images?.[0] ?? project.icon ?? ""}
           alt={project.title || "Project image"}
           width={project.images?.[0]?.includes("card") ? 400 : 120}
           height={0}
@@ -126,9 +126,9 @@ export const HeroProjectCard: React.FC<ProjectProps> = ({ project }) => {
           </div>
         </div>
       </div>
-      {(project.images?.[0] || project.logo) && (
+      {(project.images?.[0] || project.icon) && (
         <Image
-          src={project.images?.[0] ?? project.logo ?? ""}
+          src={project.images?.[0] ?? project.icon ?? ""}
           alt={project.title}
           width={project.images?.[0]?.includes("card") ? 400 : 100}
           height={0}

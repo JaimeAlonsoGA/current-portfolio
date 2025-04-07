@@ -7,7 +7,7 @@ export interface ProjectProps {
     overview: string;
     description: string;
     tags: string[];
-    logo?: string;
+    icon?: string;
     link?: {
       url: string;
       label: string;
@@ -26,7 +26,7 @@ export const projects = [
     overview:
       "Designed and developed a phone app for MIRTO® with a complete push notification system.",
     description:
-      "[b]The MIRTO Official App[/b] is a [b]luxury fashion retail application.[/b] It was commissioned by [b]MIRTO Corporation[/b] as an extension of its online Shopify store, [link:mirto.com](https://mirto.com).\n[b]I was responsible for the complete design, development, and publication of the app,[/b] including the [b]backend[/b] and the [b]push notification system.[/b]\nIt integrates multiple services such as [b]Firestore, Firebase Cloud Functions, and Cloud Scheduler.[/b] Additionally, a [b]private external notification management app[/b] was developed for MIRTO employees, allowing them to [b]schedule and send notifications[/b] to all devices. It can be found on both [link:Google Play](https://play.google.com/store/apps/details?id=com.mirto.shop&hl=es) and [link:Apple Store](https://apps.apple.com/us/app/mirto/id6743855760)\n\n✅ The app is [b]fully optimized[/b] for both [b]iOS and Android,[/b] ensuring a seamless experience across both operative systems.",
+      "[b]The MIRTO Official App[/b] is a [b]luxury fashion retail application[/b] for the [b]famous Spanish brand MIRTO.[/b] It was commissioned by [b]MIRTO Corporation[/b] as an extension of its online Shopify store, [link:mirto.com](https://mirto.com).\n[b]I was responsible for the complete design, development, and publication of the app,[/b] including the [b]backend[/b] and the [b]push notification system.[/b]\nIt integrates multiple services such as [b]Firestore, Firebase Cloud Functions, and Cloud Scheduler.[/b] Additionally, a [b]private external notification management app[/b] was developed for MIRTO employees, allowing them to [b]schedule and send notifications[/b] to all devices. It can be found on both [link:Google Play](https://play.google.com/store/apps/details?id=com.mirto.shop&hl=es) and [link:Apple Store](https://apps.apple.com/us/app/mirto/id6743855760)\n\n✅ The app is [b]fully optimized[/b] for both [b]iOS and Android,[/b] ensuring a seamless experience across both operative systems.",
     tags: [
       "typescript",
       "react native",
@@ -51,6 +51,7 @@ export const projects = [
       "/images/mirto/frame3.webp",
     ],
     type: "app",
+    icon: "/images/mirto/icon.webp",
     highlight: true,
   },
   {
@@ -68,6 +69,7 @@ export const projects = [
       "tanstack query",
       "figma",
     ],
+    icon: "/images/400/icon.webp",
     images: [
       "/images/400/card1.webp",
       "/images/400/card2.webp",
@@ -90,7 +92,7 @@ export const projects = [
       "Developed a program to upload, translate, migrate, and synchronize product listings and stock on Shopify.",
     description:
       "Retailers working with Shopify have often found uploading and synchronizing product listings between stores a painful task. \n\n✅ Using [b]GraphQL[/b] and the [b]Shopify API,[/b] I created this program that [b]saves time[/b] by [b]automating[/b] the synchronization given an SVG or JSON file. \n\n Actually, this program belongs to [b]MIRTO Corporation[/b]",
-    tags: ["typescript", "node"],
+    tags: ["typescript", "node", "graphql"],
     type: "program",
     highlight: true,
   },
@@ -98,11 +100,11 @@ export const projects = [
     id: "alchimix",
     title: "Alchimix",
     overview:
-      "designed and developed a phone app to create custom cocktails with no limits.",
+      "Designed and developed a phone app to create custom cocktails with no limits.",
     description:
       "Alchimix is a [b]phone app[/b] currently published on the [link:Google Play](https://play.google.com/store/apps/details?id=com.sonicode.coctelapp&pcampaignid=web_share).\nIts purpose was to consolidate my knowledge of the [b]end-to-end app development cycle,[/b] including [b]testing[/b] and [b]deployment.[/b] On top of that, the app was a [b]friend's birthday present.[/b]\n\n Alchimix allows users to: \n• Create a [b]pantry[/b] \n• Categorize [b]ingredients[/b] \n• Craft [b]cocktails.[/b] \n• Read easy-to-follow [b]recipes[/b] \n\n✅ The interface is intuitive\n✅ Its active users enjoy using it and give valuable feedback \n✅ This project has fulfilled its purpose and remains a fun and - unexpectedly - useful application.",
     tags: ["react native", "javascript", "expo", "figma"],
-    logo: "/images/alchimix/logo.webp",
+    icon: "/images/alchimix/logo.webp",
     link: [
       {
         url: "https://play.google.com/store/apps/details?id=com.sonicode.coctelapp&pcampaignid=web_share",
@@ -132,6 +134,7 @@ export const projects = [
     description:
       "The Visu is a public exam that biologists take to qualify as teachers for public schools. The exam focuses on studying the Latin names of living organisms, with an emphasis on identifying and understanding different parts of those organisms.\n\nIt functions are: \n• [b]Simulate[/b] a [b]real Visu exam[/b] \n• [b]Search[/b] categorized [b]species[/b] \n• [b]Practice[/b] with [b]categories[/b] independantly \n• Display [b]various pictures[/b] of one specie. It was not published yet since the app is still not finished but the code can be found on [link:GitHub](https://github.com/JaimeAlonsoGA/bio-visu). \n\n✅ The app was developed in collaboration with a biologist.",
     tags: ["javascript", "react native", "expo", "figma"],
+    icon: "/images/visu/icon.webp",
     link: [
       {
         url: "https://github.com/JaimeAlonsoGA/bio-visu",
@@ -150,10 +153,11 @@ export const projects = [
     id: "vivilife",
     title: "Vivilife Landing Page",
     overview:
-      "developed the landing page for Vivilife, an app for coaches and communities",
+      "Developed the landing page for Vivilife, an app for coaches and communities",
     description:
       "Vivilife is a [b]project[/b] of [link:Klajdi Beqiraj](https://www.linkedin.com/in/klajdi-beqiraj-1998-leven/) and [link:Gonzalo Alonso](https://www.linkedin.com/in/galonsog/) dedicated to building a [b]dynamic space for coaches and communities[/b]. I was the responsable of creating the [b]landing page.[/b] \n\n✅ The web was [b]successfully launched[/b] before the startup was [b]presented to inverstors.[/b]",
     tags: ["react", "tailwindcss"],
+    icon: "/images/vivilife/icon.webp",
     link: [
       {
         url: "https://vivilife-web.web.app/",

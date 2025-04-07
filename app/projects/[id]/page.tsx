@@ -46,16 +46,16 @@ export default async function Project({
       <div className="flex flex-col gap-8 items-center">
         <div className="flex flex-row items-center gap-8 backdrop-blur-xl rounded-full p-4 text-white">
           <Title title={project.title.toUpperCase()} />
-          {project.logo && (
-            <Image
-              src={project.logo}
-              alt={`logo of ${project.title} project`}
-              width={80}
-              height={80}
-              className="rounded-md hidden md:flex"
-            />
-          )}
         </div>
+        {project.icon && (
+          <Image
+            src={project.icon}
+            alt={`logo of ${project.title} project`}
+            width={80}
+            height={80}
+            className="rounded-md hidden md:flex"
+          />
+        )}
         <div
           className={`${
             project.tags.includes("react native")
