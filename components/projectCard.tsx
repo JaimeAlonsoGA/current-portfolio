@@ -75,7 +75,7 @@ export const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
         />
       )}
       {project.icon && (
-        <div className="sm:hidden flex">
+        <div className="sm:hidden flex justify-center items-start">
           <Image
             src={project.icon}
             alt={`logo of ${project.title} project`}
