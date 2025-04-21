@@ -3,7 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { projects } from "@/data/projects";
 
 export default function Software() {
-  const container = "flex flex-col justify-center items-center gap-4";
+  const container = "grid grid-cols-2 justify-center items-center gap-4";
   const box = "relative flex w-full justify-center"
   
   return (

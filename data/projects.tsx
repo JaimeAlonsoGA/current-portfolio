@@ -93,6 +93,9 @@ export const projects = [
     description:
       "Retailers working with Shopify have often found uploading and synchronizing product listings between stores a painful task. \n\n✅ Using [b]GraphQL[/b] and the [b]Shopify API,[/b] I created this program that [b]saves time[/b] by [b]automating[/b] the synchronization given an SVG or JSON file. \n\n Actually, this program belongs to [b]MIRTO Corporation[/b]",
     tags: ["typescript", "node", "graphql"],
+    images: [
+      "https://canalcero.com/wp-content/uploads/2023/08/shopify.jpeg",
+    ],
     type: "program",
     highlight: true,
   },

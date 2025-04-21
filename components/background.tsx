@@ -25,7 +25,7 @@ const Background = () => {
       </div>
       {isMounted && (
         <motion.div
-          className="absolute inset-0 -z-10 w-full bg-cover bg-center min-h-screen"
+          className="absolute inset-0 -z-10 w-full bg-cover bg-center min-h-screen grayscale-25"
           style={{
             backgroundImage: "url('/bg.webp')",
             backgroundSize: "cover",

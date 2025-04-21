@@ -17,9 +17,9 @@ export const Projects = () => {
 
 export const HeroProjects = () => {
   return (
-    <div className="h-1/2 w-full flex flex-wrap gap-6 overflow-hidden scrollbar-hide justify-center items-center">
+    <div className="h-1/2 w-full grid grid-cols-2 gap-6 overflow-y-auto scrollbar-hide justify-center items-center">
       {projects.map((project, i) => {
-        if (i > 1) return null;
+        if (i > 3) return null;
         return (
           <div key={i}>
             <HeroProjectCard project={project} />
