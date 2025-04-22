@@ -1,5 +1,5 @@
 import GalleryImage from "@/components/gallery";
-import { SeeMoreOnProject } from "@/components/seeMore";
+import { SeeMore } from "@/components/seeMore";
 import { Badge } from "@/components/ui/badge";
 import Title from "@/components/ui/title";
 import { projects } from "@/data/projects";
@@ -127,7 +127,7 @@ export default async function Project({
             ))}
           </div>
         )}
-        <SeeMoreOnProject />
+        <SeeMore />
         {project.link && (
           <footer className="w-full bg-gray-50 fixed bottom-0 flex flex-row justify-center gap-12 p-1">
             {project.link.map((link, i) => {

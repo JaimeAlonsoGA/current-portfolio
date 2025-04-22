@@ -18,10 +18,13 @@ const Arrow = () => {
 
     if (!isMounted) return null;
     return (
-        !isHome && (<Link href={isProject ? "/projects" : "/"} className="absolute left-5">
+        <Link
+            href={isProject ? "/projects" : "/"}
+            className={`${isHome ? "opacity-0 pointer-events-none" : ""}`}
+        >
             <IoIosArrowRoundBack color={"white"} size={"24"} />
-        </Link>)
-    )
+        </Link>
+        )
 }
 
 export default Arrow;

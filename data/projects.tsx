@@ -1,22 +1,18 @@
-import { image } from "@heroui/theme";
-
 export interface ProjectProps {
-  project: {
     id: string;
     title: string;
     overview: string;
     description: string;
     tags: string[];
     icon?: string;
-    link?: {
+    link: {
       url: string;
       label: string;
     }[];
     type: string;
-    images?: string[]; //image[0] is the main image
+    images: string[]; //image[0] is the main image
     video?: string;
     highlight?: boolean;
-  };
 }
 
 export const projects = [
@@ -84,6 +80,7 @@ export const projects = [
     video: "https://www.youtube.com/embed/FYXvtEI2agk?si=VsCWdzB4bo7s97AU",
     type: "app",
     highlight: true,
+    link: [],
   },
   {
     id: "shopify",
@@ -98,6 +95,7 @@ export const projects = [
     ],
     type: "program",
     highlight: true,
+    link: [],
   },
   {
     id: "alchimix",
