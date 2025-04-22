@@ -13,14 +13,12 @@ import { TechIcon } from "@/components/tech-icon";
 import { SPACING } from "@/lib/utils";
 import Footer from "@/components/footer";
 
-interface ProjectPageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const { id } = params;
+export default async function Project({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
   const project = projects.find((p) => p.id === id);
 
   const [selectedImage, setSelectedImage] = useState(project?.images?.[0]);
