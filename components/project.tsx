@@ -34,7 +34,7 @@ const Project: React.FC<{ project: ProjectProps; id: string }> = ({
     .slice(0, 3);
 
   return (
-    <div className={`${SPACING} mt-60 flex flex-col w-11/12 md:w-3/4 h-full`}>
+    <div className={`px-4 sm:px-8 pt-16 mt-20 pb-4 flex flex-col w-11/12 md:w-3/4 h-full`}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

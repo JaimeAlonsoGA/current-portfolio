@@ -7,7 +7,7 @@ export default function Software() {
 
   return (
     <div
-      className={`${SPACING} overflow-y-auto scrollbar-hide w-11/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center items-center gap-4`}
+      className={`px-4 sm:px-8 pt-16 mt-20 pb-4 overflow-y-auto scrollbar-hide w-11/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center items-center gap-4`}
     >
       {projects.map((project, i) => {
         return (
