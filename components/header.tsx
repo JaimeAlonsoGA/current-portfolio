@@ -47,7 +47,7 @@ const Header: React.FC = () => {
             aria-label={`Visitar ${link.name}`}
           >
             {/* <link.icon className="w-4 h-4" /> */}
-            <span className="hidden sm:inline">{link.name}</span>
+            <span className="">{link.name}</span>
           </a>
         ))}
       </nav>
