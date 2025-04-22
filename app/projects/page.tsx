@@ -1,6 +1,5 @@
 import { ProjectCard } from "@/components/projectCard";
 import { projects } from "@/data/projects";
-import { SPACING } from "@/lib/utils";
 
 export default function Software() {
   const box = "relative flex w-full justify-center";

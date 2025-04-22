@@ -10,7 +10,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ProjectProps, projects } from "@/data/projects";
 import { techs } from "@/data/techs";
 import { TechIcon } from "@/components/tech-icon";
-import { SPACING } from "@/lib/utils";
 import Footer from "@/components/footer";
 
 const Project: React.FC<{ project: ProjectProps; id: string }> = ({
