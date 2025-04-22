@@ -13,11 +13,13 @@ import { TechIcon } from "@/components/tech-icon";
 import { SPACING } from "@/lib/utils";
 import Footer from "@/components/footer";
 
-export default function ProjectPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+interface ProjectPageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default function ProjectPage({ params }: ProjectPageProps) {
   const { id } = params;
   const project = projects.find((p) => p.id === id);
 
