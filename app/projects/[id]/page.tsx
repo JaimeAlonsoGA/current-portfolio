@@ -1,17 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { projects } from "@/data/projects";
 import { techs } from "@/data/techs";
-import { text } from "@/data/text";
 import { TechIcon } from "@/components/tech-icon";
 import { SPACING } from "@/lib/utils";
 import Footer from "@/components/footer";
@@ -150,7 +147,9 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
             {/* <h2 className="text-xl font-bold mb-4 text-white">Tech stack</h2> */}
             <div className="grid grid-cols-3 gap-4">
               {projectTechs.map((tech, index) => (
-                <TechIcon name={tech.name} Icon={tech.icon} />
+                <React.Fragment key={index}>
+                  <TechIcon name={tech.name} Icon={tech.icon} />
+                </React.Fragment>
               ))}
             </div>
           </div>
