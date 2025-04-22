@@ -9,7 +9,7 @@ import { SiGraphql } from "react-icons/si";
 import { CgFigma } from "react-icons/cg";
 import { TbBrandReactNative } from "react-icons/tb";
 import { SiExpo } from "react-icons/si";
-import { SiVercel } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
 import { SiReactquery } from "react-icons/si";
 
 export interface TechsInterface {
@@ -70,9 +70,9 @@ export const techs: TechsInterface[] = [
     icon: SiExpo,
   },
   {
-    id: "vercel",
-    name: "Vercel",
-    icon: SiVercel,
+    id: "postgresql",
+    name: "PostgreSQL",
+    icon: BiLogoPostgresql,
   },
   {
     id: "tanstack query",
