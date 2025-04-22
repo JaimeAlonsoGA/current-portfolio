@@ -1,21 +1,84 @@
 export interface ProjectProps {
-    id: string;
-    title: string;
-    overview: string;
-    description: string;
-    tags: string[];
-    icon?: string;
-    link: {
-      url: string;
-      label: string;
-    }[];
-    type: string;
-    images: string[]; //image[0] is the main image
-    video?: string;
-    highlight?: boolean;
+  id: string;
+  title: string;
+  overview: string;
+  description: string;
+  tags: string[];
+  icon?: string;
+  link: {
+    url: string;
+    label: string;
+  }[];
+  type: string;
+  images: string[]; //image[0] is the main image
+  video?: string;
+  highlight?: boolean;
 }
 
 export const projects = [
+  {
+    id: "alchimix",
+    title: "Alchimix",
+    overview:
+      "Designed and developed a phone app to create custom cocktails with no limits.",
+    description:
+      "Alchimix is a [b]phone app[/b] currently published on the [link:Google Play](https://play.google.com/store/apps/details?id=com.sonicode.coctelapp&pcampaignid=web_share).\nIts purpose was to consolidate my knowledge of the [b]end-to-end app development cycle,[/b] including [b]testing[/b] and [b]deployment.[/b] On top of that, the app was a [b]friend's birthday present.[/b]\n\n Alchimix allows users to: \n• Create a [b]pantry[/b] \n• Categorize [b]ingredients[/b] \n• Craft [b]cocktails.[/b] \n• Read easy-to-follow [b]recipes[/b] \n\n✅ The interface is intuitive\n✅ Its active users enjoy using it and give valuable feedback \n✅ This project has fulfilled its purpose and remains a fun and - unexpectedly - useful application.",
+    tags: ["react native", "javascript", "expo", "figma"],
+    icon: "/images/alchimix/logo.webp",
+    link: [
+      {
+        url: "https://play.google.com/store/apps/details?id=com.sonicode.coctelapp&pcampaignid=web_share",
+        label: "Play Store",
+      },
+      {
+        url: "https://github.com/JaimeAlonsoGA/alchimix",
+        label: "GitHub",
+      },
+    ],
+    type: "app",
+    images: [
+      "/images/alchimix/frame1.webp",
+      "/images/alchimix/frame2.webp",
+      "/images/alchimix/frame3.webp",
+      "/images/alchimix/figma1.webp",
+      "/images/alchimix/figma2.webp",
+    ],
+    video: "https://youtube.com/embed/tVVbru0DCGo?feature=share",
+    highlight: true,
+  },
+  
+  {
+    id: "400",
+    title: "Internal Management System",
+    overview:
+      "Designed and developed a custom private web system from scratch to efficiently manage and administer internal resources for MIRTO Corporation.",
+    description:
+      "Internal Management Web System, designed and developed by Jaime Alonso for [link:MIRTO Corporation](https://mirto.com) \nIts main functions are: \n• Review [b]active inventory[/b], [b]filter[/b] and [b]export to PDF[/b] \n• [b]Manage users and roles[/b] \n• Control [b]production lines[/b] and [b]new orders[/b] \n• Create [b]packing lists[/b] (delivery notes) \n• Check phone [b]app analytics[/b] \n• Plan and [b]send push notifications[/b] to the phone app \n• View [b]fabric orders[/b] and [b]technical sheets[/b] \n• Visualize [b]technical photography gallery[/b]. \n\nThe departments that benefited from the creation of such application were: \n✅ Human Resources \n✅ Marketing \n✅ Production \n✅ Design \n✅ Warehouse \n✅ Company Administrators",
+    tags: [
+      "react",
+      "typescript",
+      "node",
+      "tailwindcss",
+      "tanstack query",
+      "figma",
+    ],
+    icon: "/images/400/icon.webp",
+    images: [
+      "/images/400/card1.webp",
+      "/images/400/card2.webp",
+      "/images/400/card3.webp",
+      "/images/400/card4.webp",
+      "/images/400/card5.webp",
+      "/images/400/card6.webp",
+      "/images/400/card7.webp",
+      "/images/400/card8.webp",
+      "/images/400/card9.webp",
+    ],
+    video: "https://www.youtube.com/embed/FYXvtEI2agk?si=VsCWdzB4bo7s97AU",
+    type: "app",
+    highlight: true,
+    link: [],
+  },
   {
     id: "mirto",
     title: "Mirto",
@@ -51,38 +114,6 @@ export const projects = [
     highlight: true,
   },
   {
-    id: "400",
-    title: "Internal Management System",
-    overview:
-      "Designed and developed a custom private web system from scratch to efficiently manage and administer internal resources for MIRTO Corporation.",
-    description:
-      "Internal Management Web System, designed and developed by Jaime Alonso for [link:MIRTO Corporation](https://mirto.com) \nIts main functions are: \n• Review [b]active inventory[/b], [b]filter[/b] and [b]export to PDF[/b] \n• [b]Manage users and roles[/b] \n• Control [b]production lines[/b] and [b]new orders[/b] \n• Create [b]packing lists[/b] (delivery notes) \n• Check phone [b]app analytics[/b] \n• Plan and [b]send push notifications[/b] to the phone app \n• View [b]fabric orders[/b] and [b]technical sheets[/b] \n• Visualize [b]technical photography gallery[/b]. \n\nThe departments that benefited from the creation of such application were: \n✅ Human Resources \n✅ Marketing \n✅ Production \n✅ Design \n✅ Warehouse \n✅ Company Administrators",
-    tags: [
-      "react",
-      "typescript",
-      "node",
-      "tailwindcss",
-      "tanstack query",
-      "figma",
-    ],
-    icon: "/images/400/icon.webp",
-    images: [
-      "/images/400/card1.webp",
-      "/images/400/card2.webp",
-      "/images/400/card3.webp",
-      "/images/400/card4.webp",
-      "/images/400/card5.webp",
-      "/images/400/card6.webp",
-      "/images/400/card7.webp",
-      "/images/400/card8.webp",
-      "/images/400/card9.webp",
-    ],
-    video: "https://www.youtube.com/embed/FYXvtEI2agk?si=VsCWdzB4bo7s97AU",
-    type: "app",
-    highlight: true,
-    link: [],
-  },
-  {
     id: "shopify",
     title: "Shopify Product Uploader",
     overview:
@@ -90,43 +121,12 @@ export const projects = [
     description:
       "Retailers working with Shopify have often found uploading and synchronizing product listings between stores a painful task. \n\n✅ Using [b]GraphQL[/b] and the [b]Shopify API,[/b] I created this program that [b]saves time[/b] by [b]automating[/b] the synchronization given an SVG or JSON file. \n\n Actually, this program belongs to [b]MIRTO Corporation[/b]",
     tags: ["typescript", "node", "graphql"],
-    images: [
-      "https://canalcero.com/wp-content/uploads/2023/08/shopify.jpeg",
-    ],
+    images: ["https://canalcero.com/wp-content/uploads/2023/08/shopify.jpeg"],
     type: "program",
     highlight: true,
     link: [],
   },
-  {
-    id: "alchimix",
-    title: "Alchimix",
-    overview:
-      "Designed and developed a phone app to create custom cocktails with no limits.",
-    description:
-      "Alchimix is a [b]phone app[/b] currently published on the [link:Google Play](https://play.google.com/store/apps/details?id=com.sonicode.coctelapp&pcampaignid=web_share).\nIts purpose was to consolidate my knowledge of the [b]end-to-end app development cycle,[/b] including [b]testing[/b] and [b]deployment.[/b] On top of that, the app was a [b]friend's birthday present.[/b]\n\n Alchimix allows users to: \n• Create a [b]pantry[/b] \n• Categorize [b]ingredients[/b] \n• Craft [b]cocktails.[/b] \n• Read easy-to-follow [b]recipes[/b] \n\n✅ The interface is intuitive\n✅ Its active users enjoy using it and give valuable feedback \n✅ This project has fulfilled its purpose and remains a fun and - unexpectedly - useful application.",
-    tags: ["react native", "javascript", "expo", "figma"],
-    icon: "/images/alchimix/logo.webp",
-    link: [
-      {
-        url: "https://play.google.com/store/apps/details?id=com.sonicode.coctelapp&pcampaignid=web_share",
-        label: "Play Store",
-      },
-      {
-        url: "https://github.com/JaimeAlonsoGA/alchimix",
-        label: "GitHub",
-      },
-    ],
-    type: "app",
-    images: [
-      "/images/alchimix/frame1.webp",
-      "/images/alchimix/frame2.webp",
-      "/images/alchimix/frame3.webp",
-      "/images/alchimix/figma1.webp",
-      "/images/alchimix/figma2.webp",
-    ],
-    video: "https://youtube.com/embed/tVVbru0DCGo?feature=share",
-    highlight: true,
-  },
+
   {
     id: "visuvisu",
     title: "Visu? Visu!",
@@ -180,7 +180,8 @@ export const projects = [
     id: "musickeyboard",
     title: "Musickeyboard.io",
     overview: "A simple music keyboard to play with",
-    description: "Summer is long and sometimes you just want to play the keys on your laptop keyboard to get some inspiration at night. \n\nThat is why I created [link:musickeyboard.io](https://musickeyboard.web.app) , with some features: \n• Easy to use [b]keyboard web[/b]\n• [b]8 octaves[/b], just like a [b]real piano[/b] \n• A lot of [b]customization[/b] options to get inspired \n• [b]Chord tracker[/b] \n\n ✅ Still recibing core sound fix updates.",
+    description:
+      "Summer is long and sometimes you just want to play the keys on your laptop keyboard to get some inspiration at night. \n\nThat is why I created [link:musickeyboard.io](https://musickeyboard.web.app) , with some features: \n• Easy to use [b]keyboard web[/b]\n• [b]8 octaves[/b], just like a [b]real piano[/b] \n• A lot of [b]customization[/b] options to get inspired \n• [b]Chord tracker[/b] \n\n ✅ Still recibing core sound fix updates.",
     tags: ["react", "javascript", "tailwindcss"],
     link: [
       {
@@ -203,7 +204,8 @@ export const projects = [
     id: "jaime360",
     title: "Jaime360",
     overview: "My old portfolio, a bit too much creative",
-    description: "When I started creating webs I had some experience with sound design and videogame audio so I created a portfolio to showcase both skills, software and audio. \n\n• This web is [b]deprecated[/b]\n\n✅ Creating it settled the foundations of my knowledge of [b]Firebase Hosting:[/b] [link: website](https://jaime360.web.app)",
+    description:
+      "When I started creating webs I had some experience with sound design and videogame audio so I created a portfolio to showcase both skills, software and audio. \n\n• This web is [b]deprecated[/b]\n\n✅ Creating it settled the foundations of my knowledge of [b]Firebase Hosting:[/b] [link: website](https://jaime360.web.app)",
     tags: ["react", "javascript", "tailwindcss", "firebase"],
     link: [
       {
@@ -227,7 +229,8 @@ export const projects = [
     id: "elboske",
     title: "Mixing studio website",
     overview: "Designed and developed a website for a music studio in Madrid",
-    description: "El Boske Mixing Studio is my own music studio in Madrid, Spain. I wanted to create a website to present my work and the services of the studio \n\n• The web is [b]fully responsive[/b] and [b]optimized for SEO[/b] \n• It has a [b]mailing automated system[/b] \n\n ✅ The site fulfills its purpose.",
+    description:
+      "El Boske Mixing Studio is my own music studio in Madrid, Spain. I wanted to create a website to present my work and the services of the studio \n\n• The web is [b]fully responsive[/b] and [b]optimized for SEO[/b] \n• It has a [b]mailing automated system[/b] \n\n ✅ The site fulfills its purpose.",
     tags: ["react", "javascript", "tailwindcss", "firebase"],
     link: [
       {

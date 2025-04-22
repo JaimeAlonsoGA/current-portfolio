@@ -47,7 +47,7 @@ const Hero = () => {
               variant="secondary"
               className={cn(
                 "flex items-center gap-2 px-4 py-2 transition-all",
-                "hover:bg-white/20 hover:scale-105 cursor-pointer"
+                "hover:bg-white/20 hover:scale-105 cursor-pointer hover:border hover:border-primary/60 hover:text-white/90"
               )}
             >
               <tech.icon className="w-4 h-4" />
@@ -62,18 +62,20 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8 }}
         >
-          <a
+          {/* <a
             href="mailto:alonsog.jaime@gmail.com"
-            className="backdrop-blur-sm h-9 px-4 py-2 text-sm font-medium text-blue-400 hover:text-blue-300 hover:underline underline-offset-4 transition-all rounded-md border border-blue-400/20 hover:border-blue-400/40"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none 
+            focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none 
+            [&_svg]:size-4 [&_svg]:shrink-0 dark:focus-visible:ring-zinc-300 bg-zinc-900 text-zinc-50 shadow 
+            dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 h-8 rounded-md px-3 text-xs border-white/10 bg-white/20 hover:bg-white/10"
           >
             Contact
-          </a>
+          </a> */}
           <SeeMore />
         </motion.div>
       </div>
     </motion.div>
   );
 };
-
 
 export default Hero;

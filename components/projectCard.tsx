@@ -1,25 +1,25 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { ArrowUpRight } from "lucide-react"
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent } from "@/components/ui/card"
-import { ProjectProps } from "@/data/projects"
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import { ProjectProps } from "@/data/projects";
 
 export function ProjectCard({ project }: { project: ProjectProps }) {
-  const [isHovered, setIsHovered] = useState(false)
+  const [isHovered, setIsHovered] = useState(false);
 
   const projectLink = project.id
     ? `/projects/${project.id}`
     : typeof project.link === "string"
-      ? project.link
-      : project.link[0]?.url || "#"
+    ? project.link
+    : project.link[0]?.url || "#";
 
-  const isMobileApp = project.images[0]?.includes("frame")
+  const isMobileApp = project.images[0]?.includes("frame");
 
   return (
     <motion.div
@@ -49,8 +49,9 @@ export function ProjectCard({ project }: { project: ProjectProps }) {
                 alt={project.title}
                 width={600}
                 height={340}
-                className={`w-full h-full ${isMobileApp ? "object-contain" : "object-cover"
-                  }`} // Cambia el estilo según el tipo de imagen
+                className={`w-full h-full ${
+                  isMobileApp ? "object-contain" : "object-cover"
+                }`} // Cambia el estilo según el tipo de imagen
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </motion.div>
@@ -66,12 +67,20 @@ export function ProjectCard({ project }: { project: ProjectProps }) {
             </motion.div>
           </div>
 
-          <CardContent className="p-6 flex flex-col justify-between ">
-            <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
-            <p className="text-muted-foreground text-sm mb-4">{project.overview}</p>
+          <CardContent className="p-6 flex flex-col">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+              {project.title}
+            </h3>
+            <p className="text-muted-foreground text-sm mb-4">
+              {project.overview}
+            </p>
             <div className="flex flex-wrap gap-2">
               {project.tags.map((tag) => (
-                <Badge key={tag} variant="secondary" className="font-normal text-xs">
+                <Badge
+                  key={tag}
+                  variant="secondary"
+                  className="font-normal text-xs"
+                >
                   {tag}
                 </Badge>
               ))}
@@ -80,5 +89,5 @@ export function ProjectCard({ project }: { project: ProjectProps }) {
         </Card>
       </Link>
     </motion.div>
-  )
+  );
 }
