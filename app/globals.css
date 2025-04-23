@@ -11,3 +11,23 @@ body {
     --radius: 0.5rem;
   }
 }
+
+.text-blue-400 {
+  color: #569cd6; /* Azul para palabras clave */
+}
+
+.text-yellow-400 {
+  color: #dcdcaa; /* Amarillo para conceptos destacados */
+}
+
+.text-green-400 {
+  color: #6a9955; /* Verde para palabras técnicas */
+}
+
+.text-orange-400 {
+  color: #ce9178; /* Marrón para strings (cadenas) */
+}
+
+.text-gray-300 {
+  color: #d4d4d4; /* Gris para texto general */
+}

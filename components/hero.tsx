@@ -7,8 +7,35 @@ import { Badge } from "./ui/badge";
 
 import { motion } from "framer-motion";
 import { SeeMore } from "./seeMore";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [displayedText, setDisplayedText] = useState("");
+  const fullText = text.current.description;
+  const typingSpeed = 30;
+  const initialDelay = 2000;
+
+  useEffect(() => {
+    let index = -2;
+
+    const startTyping = () => {
+      const interval = setInterval(() => {
+        if (index < fullText.length - 1) {
+          setDisplayedText((prev) => prev + fullText[index]);
+          index++;
+        } else {
+          clearInterval(interval);
+        }
+      }, typingSpeed);
+    };
+
+    const timeout = setTimeout(startTyping, initialDelay);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [fullText]);
+
   return (
     <motion.div
       className="min-h-screen flex flex-col justify-center items-center w-full"
@@ -26,14 +53,48 @@ const Hero = () => {
           {text.current.name}
         </motion.h1>
 
-        <motion.p
-          className="text-center tracking-wider mb-8"
+        <motion.pre
+          className={cn(
+            "tracking-wider mb-8 whitespace-pre-wrap bg-zinc-900 p-4 rounded-md text-left text-sm font-mono"
+          )}
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}
         >
-          {text.current.description}
-        </motion.p>
+          <code>
+            {displayedText.split(" ").map((word, index) => (
+              <span
+                key={index}
+                className={
+                  word.toLowerCase().includes("developing") ||
+                  word.toLowerCase().includes("applications")
+                    ? "text-blue-400" // Palabras clave importantes
+                    : word.toLowerCase().includes("software") ||
+                      word.toLowerCase().includes("solutions")
+                    ? "text-green-400" // Palabras técnicas
+                    : word.toLowerCase().includes("cutting-edge") ||
+                      word.toLowerCase().includes("cross-platform")
+                    ? "text-orange-400" // Strings (cadenas)
+                    : "text-gray-300" // Texto general
+                }
+              >
+                {word.replace("undefined", "") + " "}
+              </span>
+            ))}
+            <motion.span
+              className={cn("ml-1")}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 1, 0] }}
+              transition={{
+                repeat: Infinity,
+                duration: 1,
+                ease: "easeInOut",
+              }}
+            >
+              |
+            </motion.span>
+          </code>
+        </motion.pre>
 
         <motion.div
           className="flex flex-wrap justify-center gap-3 mb-8"
@@ -47,7 +108,7 @@ const Hero = () => {
               variant="secondary"
               className={cn(
                 "flex items-center gap-2 px-4 py-2 transition-all",
-                "hover:bg-white/20 hover:scale-105 cursor-pointer hover:border hover:border-primary/60 hover:text-white/90"
+                "hover:bg-white/20 hover:scale-105 cursor-default hover:border hover:border-primary/60 hover:text-white/90"
               )}
             >
               <tech.icon className="w-4 h-4" />
@@ -62,15 +123,6 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8 }}
         >
-          {/* <a
-            href="mailto:alonsog.jaime@gmail.com"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none 
-            focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none 
-            [&_svg]:size-4 [&_svg]:shrink-0 dark:focus-visible:ring-zinc-300 bg-zinc-900 text-zinc-50 shadow 
-            dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 h-8 rounded-md px-3 text-xs border-white/10 bg-white/20 hover:bg-white/10"
-          >
-            Contact
-          </a> */}
           <SeeMore />
         </motion.div>
       </div>

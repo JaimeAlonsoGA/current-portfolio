@@ -124,14 +124,14 @@ const Project: React.FC<{ project: ProjectProps; id: string }> = ({
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="space-y-8"
+          className="space-y-8 border-l rounded-md border-white/20"
         >
           <div>
             {/* <h2 className="text-xl font-bold mb-4 text-white">Tech stack</h2> */}
             <div className="grid grid-cols-3 gap-4">
               {projectTechs.map((tech, index) => (
                 <React.Fragment key={index}>
-                  <TechIcon name={tech.name} Icon={tech.icon} />
+                  <TechIcon name={tech.name} Icon={tech.icon} color={tech.color}/>
                 </React.Fragment>
               ))}
             </div>

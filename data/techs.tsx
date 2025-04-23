@@ -16,6 +16,7 @@ export interface TechsInterface {
   id: string;
   name: string;
   icon: IconType;
+  color: string;
 }
 
 export const techs: TechsInterface[] = [
@@ -23,65 +24,78 @@ export const techs: TechsInterface[] = [
     id: "react",
     name: "React",
     icon: SiPreact,
+    color: "#61DAFB", // Azul claro
   },
   {
     id: "nextjs",
     name: "Next",
     icon: SiNextdotjs,
+    color: "#000000", // Negro
   },
   {
     id: "tailwindcss",
     name: "Tailwind",
     icon: RiTailwindCssFill,
+    color: "#38BDF8", // Azul claro
   },
   {
     id: "typescript",
     name: "TypeScript",
     icon: SiTypescript,
+    color: "#3178C6", // Azul
   },
   {
     id: "graphql",
     name: "GraphQL",
     icon: SiGraphql,
+    color: "#E535AB", // Rosa
   },
   {
     id: "firebase",
     name: "Firebase",
     icon: IoLogoFirebase,
+    color: "#FFCA28", // Amarillo
   },
   {
     id: "figma",
     name: "Figma",
     icon: CgFigma,
+    color: "#F24E1E", // Naranja
   },
   {
     id: "javascript",
     name: "JavaScript",
     icon: SiJavascript,
+    color: "#F7DF1E", // Amarillo
   },
   {
     id: "react native",
     name: "React Native",
     icon: TbBrandReactNative,
+    color: "#61DAFB", // Azul claro (igual que React)
   },
   {
     id: "expo",
     name: "Expo",
     icon: SiExpo,
+    color: "#000020", // Azul oscuro
   },
   {
     id: "postgresql",
     name: "PostgreSQL",
     icon: BiLogoPostgresql,
+    color: "#336791", // Azul
   },
   {
     id: "tanstack query",
     name: "Tanstack Query",
     icon: SiReactquery,
+    color: "#FF4154", // Rojo
   },
   {
     id: "node",
     name: "Node",
     icon: SiTsnode,
-  }
+    color: "#339933", // Verde
+  },
 ];
