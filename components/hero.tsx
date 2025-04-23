@@ -14,6 +14,7 @@ const Hero = () => {
   const fullText = text.current.description;
   const typingSpeed = 30;
   const initialDelay = 2000;
+  const [hoveredTech, setHoveredTech] = useState<string | null>(null);
 
   useEffect(() => {
     let index = -2;
@@ -108,11 +109,25 @@ const Hero = () => {
               variant="secondary"
               className={cn(
                 "flex items-center gap-2 px-4 py-2 transition-all",
-                "hover:bg-white/20 hover:scale-105 cursor-default hover:border hover:border-primary/60 hover:text-white/90"
+                `hover:bg-zinc-900/60 hover:scale-105 cursor-default hover:border hover:border-primary/60`
               )}
+              onMouseEnter={() => setHoveredTech(tech.id)}
+              onMouseLeave={() => setHoveredTech(null)}
             >
-              <tech.icon className="w-4 h-4" />
-              <span className="text-xs">{tech.name}</span>
+              <tech.icon
+                className="w-4 h-4"
+                style={{
+                  color: hoveredTech === tech.id ? tech.color : "inherit",
+                }}
+              />{" "}
+              <span
+                className="text-xs"
+                style={{
+                  color: hoveredTech === tech.id ? tech.color : "inherit",
+                }}
+              >
+                {tech.name}
+              </span>
             </Badge>
           ))}
         </motion.div>

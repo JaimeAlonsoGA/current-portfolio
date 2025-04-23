@@ -20,9 +20,9 @@ const Arrow = () => {
     return (
         <Link
             href={isProject ? "/projects" : "/"}
-            className={`${isHome ? "opacity-0 pointer-events-none" : ""}`}
+            className={`${isHome ? "hidden sm:flex" : ""}`}
         >
-            <IoIosArrowRoundBack color={"white"} size={"24"} />
+            <IoIosArrowRoundBack color={"white"} size={"24"} className={`${isHome ? "hidden" : ""}`} />
         </Link>
         )
 }

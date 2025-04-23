@@ -105,7 +105,11 @@ const ContentCard: React.FC<{ project: ProjectProps }> = ({ project }) => {
         <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
           {project.title}
         </h3>
-        <p className="text-muted-foreground text-sm mb-4">{project.overview}</p>
+        <span className="min-h-24">
+          <p className="text-muted-foreground text-sm mb-4">
+            {project.overview}
+          </p>
+        </span>
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <Badge

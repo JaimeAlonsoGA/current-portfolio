@@ -25,13 +25,12 @@ const Header: React.FC = () => {
     <header
       className={cn(
         "fixed backdrop-blur-lg z-10 w-full top-0",
-        "flex flex-row justify-center sm:justify-between items-center px-4 sm:px-8 py-4",
+        "flex flex-row justify-around sm:justify-between items-center px-4 sm:px-8 py-4",
         "font-[family-name:var(--font-geist-sans)]",
         "bg-black/10 border-b border-white/10 shadow-sm gap-4"
       )}
     >
       <Arrow />
-
       <nav className="flex items-center gap-4 sm:gap-6">
         <a
           className={cn(
