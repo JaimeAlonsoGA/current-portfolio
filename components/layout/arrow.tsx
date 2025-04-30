@@ -1,22 +1,8 @@
 
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
-const Arrow = () => {
-    const pathname = usePathname()
-    const [isMounted, setIsMounted] = useState(false);
-    const isHome = pathname === "/";
-    const isProject = pathname.includes("/projects/");
-
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
-
-    if (!isMounted) return null;
+const Arrow: React.FC<{isProject: boolean, isHome: boolean }> = ({ isProject, isHome }) => {
     return (
         <Link
             href={isProject ? "/projects" : "/"}

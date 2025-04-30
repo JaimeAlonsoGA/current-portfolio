@@ -1,8 +1,21 @@
+"use client";
+
 import Arrow from "./layout/arrow";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const Header: React.FC = () => {
+  const pathname = usePathname()
+  const [isMounted, setIsMounted] = useState(false);
+  const isHome = pathname === "/";
+  const isProject = pathname.includes("/projects/");
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const navLinks = [
     {
       name: "LinkedIn",
@@ -20,7 +33,8 @@ const Header: React.FC = () => {
       icon: FiGithub,
     },
   ];
-
+  
+  if (!isMounted) return null;
   return (
     <header
       className={cn(
@@ -30,7 +44,7 @@ const Header: React.FC = () => {
         "bg-black/10 border-b border-white/10 shadow-sm gap-4"
       )}
     >
-      <Arrow />
+      <Arrow isHome={isHome} isProject={isProject}/>
       <nav className="flex items-center gap-4 sm:gap-6">
         <a
           className={cn(
