@@ -12,13 +12,13 @@ const Footer = () => {
     <footer
       className={cn(
         "relative w-full font-[family-name:var(--font-geist-sans)]",
-        pathname !== "/" && "hidden"
+        pathname === "/cv" && "hidden"
       )}
     >
       <Blanket />
       <div className="absolute bottom-0 w-full flex justify-center items-center py-2 backdrop-blur-sm bg-black/10">
         <p className="text-white/70 text-xs">
-          © {currentYear} Jaime Alonso. All rights reserved.
+          © {currentYear} Jaime Alonso García-Amorena. All rights reserved. Updated December 2025.
         </p>
       </div>
     </footer>

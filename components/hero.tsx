@@ -68,15 +68,15 @@ const Hero = () => {
                 key={index}
                 className={
                   word.toLowerCase().includes("developing") ||
-                  word.toLowerCase().includes("applications")
-                    ? "text-blue-400" // Palabras clave importantes
+                    word.toLowerCase().includes("applications")
+                    ? "text-blue-400"
                     : word.toLowerCase().includes("software") ||
                       word.toLowerCase().includes("solutions")
-                    ? "text-green-400" // Palabras técnicas
-                    : word.toLowerCase().includes("cutting-edge") ||
-                      word.toLowerCase().includes("cross-platform")
-                    ? "text-orange-400" // Strings (cadenas)
-                    : "text-gray-300" // Texto general
+                      ? "text-green-400"
+                      : word.toLowerCase().includes("cutting-edge") ||
+                        word.toLowerCase().includes("cross-platform")
+                        ? "text-orange-400"
+                        : "text-gray-300"
                 }
               >
                 {word.replace("undefined", "") + " "}

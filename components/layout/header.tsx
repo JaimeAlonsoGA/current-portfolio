@@ -1,10 +1,11 @@
 "use client";
 
-import Arrow from "./layout/arrow";
+import Arrow from "./arrow";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   const pathname = usePathname()
@@ -33,7 +34,7 @@ const Header: React.FC = () => {
       icon: FiGithub,
     },
   ];
-  
+
   if (!isMounted) return null;
   return (
     <header
@@ -44,7 +45,18 @@ const Header: React.FC = () => {
         "bg-black/10 border-b border-white/10 shadow-sm gap-4"
       )}
     >
-      <Arrow isHome={isHome} isProject={isProject}/>
+      {isHome && <div className="flex flex-row gap-2 items-center">
+        {/* <Image src={logo} alt="Logo" width={40} height={40} className="rounded-full" /> */}
+        <h1 className={cn(
+          "text-white/90 font-bold flex items-center gap-2",
+          "hover:text-white",
+          "transition-all duration-300 text-sm"
+        )}>
+          Fullstack Software Developer
+        </h1>
+      </div>
+      }
+      <Arrow isHome={isHome} isProject={isProject} />
       <nav className="flex items-center gap-4 sm:gap-6">
         <a
           className={cn(
@@ -52,11 +64,11 @@ const Header: React.FC = () => {
             "hover:text-white hover:underline hover:underline-offset-4",
             "transition-all duration-300 text-sm"
           )}
-          href="/curriculum.pdf"
-          download="Curriculum_Jaime.pdf"
+          // href="/curriculum.pdf"
+          // download="Curriculum_Jaime.pdf"
           aria-label="Descargar Curriculum"
         >
-          <span className="">Curriculum</span>
+          <Link href="/cv" className="">Curriculum</Link>
         </a>
         {navLinks.map((link) => (
           <a

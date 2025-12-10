@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Jaime Alonso García-Amorena</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                max-width: 100%;
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: transparent;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px 50px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: -1px;
+        }
+
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.9em;
+            opacity: 0.95;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .content {
+            padding: 40px 50px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 1.4em;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .about {
+            font-size: 1em;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid #3498db;
+        }
+
+        .experience-item:last-child, .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .job-date {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .company {
+            font-size: 0.95em;
+            color: #3498db;
+            margin-bottom: 8px;
+        }
+
+        .location {
+            font-size: 0.85em;
+            color: #95a5a6;
+            margin-bottom: 8px;
+        }
+
+        .description {
+            font-size: 0.95em;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .description ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .description li {
+            margin-bottom: 5px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #3498db;
+        }
+
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .skill-category p {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .languages {
+            display: flex;
+            gap: 30px;
+        }
+
+        .language-item {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .language-item strong {
+            display: block;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .language-item span {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .additional-note {
+            background: #ecf0f1;
+            padding: 12px 15px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            color: #555;
+            font-style: italic;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Jaime Alonso García-Amorena</h1>
+            <div class="subtitle">Fullstack Software Developer | React & Node.js Specialist | Creative Problem Solver</div>
+            <div class="contact-info">
+                <span>📍 Tres Cantos, Madrid, Spain</span>
+                <span>📧 alonsog.jaime@gmail.com</span>
+                <span>📱 +34 684 332 575</span>
+                <span>🔗 linkedin.com/in/jaime360</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">About Me</h2>
+                <div class="about">
+                    Full-stack developer with 4+ native applications in production and 10+ active web projects. Specialized in TypeScript, React, Node.js, and scalable architectures. Entrepreneur at heart, traveler by instinct, creative by nature. My background in audio engineering and itinerant lifestyle has taught me the value of perspective and creative problem-solving. I’m seeking remote projects where I can contribute innovative technical solutions and where creativity and communication are part of the culture.               </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Fullstack Software Developer | Freelance</div>
+                        <div class="job-date">Jun 2025 - Sep 2025</div>
+                    </div>
+                    <div class="company">NordicPro</div>
+                    <div class="location">Remote</div>
+                    <div class="description">
+                        Creation of a team management and mental health progressive web application. Features include role management, push notifications, real-time chats, analytics, and statistics in a performance-based Next.js SSR environment. Mobile-first native experience with latest UX standards.
+                        <br><strong>Stack:</strong> Next.js, TypeScript, PostgreSQL, Tailwind CSS, Server Side Rendering, PWA
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Founder and CEO</div>
+                        <div class="job-date">Oct 2024 - Present</div>
+                    </div>
+                    <div class="company">Cloudcom LLC</div>
+                    <div class="location">New Mexico, United States (Remote)</div>
+                    <div class="description">
+                        Founder and CEO of an e-commerce LLC focused on Amazon FBA. Managing all aspects of the business from product sourcing to customer service and logistics optimization.
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Fullstack Software Developer | Freelance</div>
+                        <div class="job-date">Nov 2025 - Present</div>
+                    </div>
+                    <div class="company">Super Bullish</div>
+                    <div class="location">Colombia (Hybrid)</div>
+                    <div class="description">
+                        Developed a Web3 fullstack web application with OAuth and blockchain transactions integration.
+                        <br><strong>Focus:</strong> Web3, Blockchain, Software Architecture, Full-Stack Development
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Fullstack Software Developer</div>
+                        <div class="job-date">Sep 2024 - May 2025</div>
+                    </div>
+                    <div class="company">MIRTO</div>
+                    <div class="location">Madrid, Spain (On-site)</div>
+                    <div class="description">
+                        Designed, developed and maintained cross-platform applications and software solutions:
+                        <ul>
+                            <li>Released mobile application with complete push notification environment</li>
+                            <li>Internal management system with stock management, user roles, production control, packing lists, analytics, and push notification scheduling</li>
+                            <li>Automation program for Shopify product listing synchronization across multiple stores</li>
+                        </ul>
+                        <strong>Stack:</strong> TypeScript, Full-Stack Development, Project Management
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Sound Engineer & Music Producer</div>
+                        <div class="job-date">Nov 2025 - Dec 2025</div>
+                    </div>
+                    <div class="company">Casa Kayam (Co-op)</div>
+                    <div class="location">Guatapé, Antioquia, Colombia</div>
+                    <div class="description">
+                        Auxiliary sound engineer and music producer at a professional studio. Recorded complete album for El Nazareno and produced modern production songs for various artists.
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Mixing Engineer | Freelance</div>
+                        <div class="job-date">Jun 2024 - Sep 2024</div>
+                    </div>
+                    <div class="company">El Boske Mixing Studio</div>
+                    <div class="location">Madrid, Spain (Hybrid)</div>
+                    <div class="description">
+                        Offered music recording, production, and online mixing/mastering services. Independent entrepreneurship in the audio engineering field.
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Live Sound Engineer</div>
+                        <div class="job-date">Jun 2022 - Oct 2023</div>
+                    </div>
+                    <div class="company">Hey Mickey!</div>
+                    <div class="location">Spain (On-site)</div>
+                    <div class="description">
+                        Supervised, set up and mixed sound and lighting for private events across Spain as part of the in-house technician team.
+                    </div>
+                </div>
+
+                <div class="additional-note">
+                    <strong>Additional Experience:</strong> Multiple roles in customer service, team management, and leadership positions (2017-2023) including summer camp coordination, retail operations, and lifeguarding, demonstrating strong interpersonal skills and versatility.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+
+                <div class="education-item">
+                    <div class="job-header">
+                        <div class="job-title">Higher Technician in Cross-Platform Software Development</div>
+                        <div class="job-date">2025</div>
+                    </div>
+                    <div class="company">Universidad Francisco de Vitoria</div>
+                    <div class="location">Madrid, Spain</div>
+                    <div class="description">
+                        Comprehensive study of application lifecycle, backend architecture, responsive frontend design, user-based testing, clean code practices, and software optimization. Focus on Java, JavaScript, MySQL, HTML, and CSS.
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="job-header">
+                        <div class="job-title">Advanced Diploma in Sound Engineering and Music Production</div>
+                        <div class="job-date">2022</div>
+                    </div>
+                    <div class="company">Abbey Road Institute</div>
+                    <div class="location">Amsterdam, Netherlands</div>
+                    <div class="description">
+                        Advanced knowledge in music recording, audio editing, sound design, live and studio engineering, digital production, creative thinking, project planning, and personal branding.
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Frontend Development</h4>
+                        <p>React, Next.js, React Native, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Responsive Design, PWA</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Backend Development</h4>
+                        <p>Node.js, Java, PostgreSQL, MySQL, GraphQL, REST APIs, Server Side Rendering, Supabase</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools & Technologies</h4>
+                        <p>Tanstack Query, Git, Web3, Blockchain, OAuth, Push Notifications, Postman, Figma, AI Integration</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Soft Skills</h4>
+                        <p>Creative Vision, Problem Solving, Entrepreneurship, Project Management, Team Leadership, Interpersonal Communication, Critical Thinking</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Languages</h2>
+                <div class="languages">
+                    <div class="language-item">
+                        <strong>Spanish</strong>
+                        <span>Native</span>
+                    </div>
+                    <div class="language-item">
+                        <strong>English</strong>
+                        <span>Advanced (Fluent)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

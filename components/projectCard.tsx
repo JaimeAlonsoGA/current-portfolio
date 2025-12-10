@@ -2,126 +2,129 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight, ExternalLink, GitBranch } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { FaStar } from "react-icons/fa";
 
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { ProjectProps } from "@/data/projects";
 import { cn } from "@/lib/utils";
 
 export function ProjectCard({ project }: { project: ProjectProps }) {
-  const projectLink = project.id
-    ? `/projects/${project.id}`
-    : typeof project.link === "string"
-    ? project.link
-    : project.link[0]?.url || "#";
+  const isMobileApp = project.images[0]?.includes("frame");
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      viewport={{ once: true, margin: "-100px" }}
-      whileHover={{ y: -5 }}
-      className="w-full max-w-sm" // Asegura un tamaño consistente para todas las cards
+      viewport={{ once: true }}
+      className={cn(
+        "relative bg-white/5 backdrop-blur-md rounded-xl overflow-hidden",
+        "border border-white/10 hover:border-white/20 transition-all duration-300",
+        project.highlight && "ring-2 ring-yellow-500/50"
+      )}
     >
-      <Link href={projectLink}>
-        {project.highlight ? (
-          <div
-            className={cn(
-              "w-full max-w-sm h-[450px] bg-gradient-to-r from-yellow-500 to-red-500 p-0.5 rounded-xl"
-            )}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6">
+        {/* Image Carousel */}
+        <div className="relative aspect-video bg-black/20 rounded-lg overflow-hidden">
+          <Carousel opts={{
+            align: "start",
+            loop: true,
+          }}
+            className="w-full h-full"
           >
-            <ContentCard project={project} />
+            <CarouselContent>
+              {project.images.map((img, idx) => (
+                <CarouselItem key={idx} className="relative aspect-video">
+                  <Image
+                    src={img}
+                    alt={`${project.title} image ${idx + 1}`}
+                    fill
+                    className={cn(
+                      "object-cover rounded-lg",
+                      isMobileApp && "object-contain"
+                    )}
+                    priority={idx === 0}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white hover:bg-black/70" />
+            <CarouselNext className="right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white hover:bg-black/70" />
+          </Carousel>
+
+          {/* Highlight Badge */}
+          {project.highlight && (
+            <div className="absolute top-3 right-3 bg-yellow-500/90 backdrop-blur-sm rounded-full p-2">
+              <FaStar className="w-4 h-4 text-white" />
+            </div>
+          )}
+        </div>
+
+        {/* Content */}
+        <div className="flex flex-col justify-between">
+          <div>
+            <div className="flex items-start justify-between mb-3">
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-1">
+                  {project.title}
+                </h2>
+                <span className="text-sm text-white/60 uppercase tracking-wide">
+                  {project.type}
+                </span>
+              </div>
+            </div>
+
+            <p className="text-white/80 text-base mb-4 leading-relaxed">
+              {project.overview}
+            </p>
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.tags.map((tag) => (
+                <Badge
+                  key={tag}
+                  variant="secondary"
+                  className="bg-white/10 text-white/90 border-white/20 text-xs"
+                >
+                  {tag}
+                </Badge>
+              ))}
+            </div>
           </div>
-        ) : (
-          <div className="w-full max-w-sm h-[450px]">
-            <ContentCard project={project} />
-          </div>
-        )}
-      </Link>
+
+          {/* Links */}
+          {project.link && project.link.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {project.link.map((link) => (
+                <Button
+                  key={link.label}
+                  asChild
+                  variant="outline"
+                  size="sm"
+                  className="bg-white/5 border-white/20 text-white hover:bg-white/10"
+                >
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link.label === "GitHub" ? (
+                      <GitBranch className="mr-2 h-4 w-4" />
+                    ) : (
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                    )}
+                    {link.label}
+                  </a>
+                </Button>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
     </motion.div>
   );
 }
-
-const ContentCard: React.FC<{ project: ProjectProps }> = ({ project }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const isMobileApp = project.images[0]?.includes("frame");
-
-  return (
-    <Card
-      className="overflow-hidden h-full transition-all duration-300 hover:shadow-lg border-none"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <div className="relative aspect-video overflow-hidden">
-        <motion.div
-          animate={{
-            scale: isHovered ? 1.05 : 1,
-          }}
-          transition={{ duration: 0.4 }}
-          className="h-full w-full"
-        >
-          <Image
-            src={project.images[0] || "/placeholder.svg"}
-            alt={project.title}
-            width={600}
-            height={340}
-            className={`w-full h-full ${
-              isMobileApp ? "object-contain" : "object-cover"
-            }`} // Cambia el estilo según el tipo de imagen
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-        </motion.div>
-
-        {project.highlight && (
-          <motion.div
-            className="absolute top-4 right-14 md:right-12 bg-background/80 backdrop-blur-sm rounded-full p-2"
-            animate={{
-              rotate: isHovered ? 145 : 0,
-            }}
-            transition={{ duration: 0.3 }}
-          >
-            <span className="text-yellow-500">
-              <FaStar className="h-4 w-4" />
-            </span>
-          </motion.div>
-        )}
-        <motion.div
-          className="absolute top-4 right-4 bg-background/80 backdrop-blur-sm rounded-full p-2"
-          animate={{
-            rotate: isHovered ? 45 : 0,
-          }}
-          transition={{ duration: 0.3 }}
-        >
-          <ArrowUpRight className="h-4 w-4" />
-        </motion.div>
-      </div>
-
-      <CardContent className="p-6 flex flex-col">
-        <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-          {project.title}
-        </h3>
-        <span className="min-h-24">
-          <p className="text-muted-foreground text-sm mb-4">
-            {project.overview}
-          </p>
-        </span>
-        <div className="flex flex-wrap gap-2">
-          {project.tags.map((tag) => (
-            <Badge
-              key={tag}
-              variant="secondary"
-              className="font-normal text-xs"
-            >
-              {tag}
-            </Badge>
-          ))}
-        </div>
-      </CardContent>
-    </Card>
-  );
-};

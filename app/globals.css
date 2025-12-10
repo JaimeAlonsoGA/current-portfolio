@@ -2,32 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
     --radius: 0.5rem;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+    @apply text-white;
+  }
 }
 
-.text-blue-400 {
-  color: #569cd6; /* Azul para palabras clave */
+@layer utilities {
+  /* Syntax highlighting colors */
+  .text-blue-400 {
+    color: #569cd6;
+  }
+
+  .text-yellow-400 {
+    color: #dcdcaa;
+  }
+
+  .text-green-400 {
+    color: #6a9955;
+  }
+
+  .text-orange-400 {
+    color: #ce9178;
+  }
+
+  .text-gray-300 {
+    color: #d4d4d4;
+  }
+  
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Backdrop blur optimizations */
+  .backdrop-blur-optimized {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    will-change: backdrop-filter;
+  }
 }
 
-.text-yellow-400 {
-  color: #dcdcaa; /* Amarillo para conceptos destacados */
-}
-
-.text-green-400 {
-  color: #6a9955; /* Verde para palabras técnicas */
-}
-
-.text-orange-400 {
-  color: #ce9178; /* Marrón para strings (cadenas) */
-}
-
-.text-gray-300 {
-  color: #d4d4d4; /* Gris para texto general */
+/* Performance optimizations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, GitBranch, Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -10,7 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ProjectProps, projects } from "@/data/projects";
 import { techs } from "@/data/techs";
 import { TechIcon } from "@/components/tech-icon";
-import Footer from "@/components/footer";
+import Footer from "@/components/layout/footer";
 
 const Project: React.FC<{ project: ProjectProps; id: string }> = ({
   project,
@@ -59,7 +59,7 @@ const Project: React.FC<{ project: ProjectProps; id: string }> = ({
               >
                 <Link href={link.url} target="_blank" rel="noopener noreferrer">
                   {link.label === "GitHub" ? (
-                    <Github className="mr-2 h-4 w-4" />
+                    <GitBranch className="mr-2 h-4 w-4" />
                   ) : (
                     <ExternalLink className="mr-2 h-4 w-4" />
                   )}

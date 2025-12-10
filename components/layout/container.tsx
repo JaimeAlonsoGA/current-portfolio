@@ -9,10 +9,9 @@ interface ContainerProps {
 const Container: React.FC<ContainerProps> = ({ children }) => (
   <main
     className={cn(
-      "flex flex-col justify-center items-center",
-      "min-h-screen h-screen overflow-auto",
-      "font-[family-name:var(--font-geist-sans)]",
-      "transition-all duration-300"
+      "relative flex flex-col items-center",
+      "min-h-screen w-full",
+      "font-[family-name:var(--font-geist-sans)]"
     )}
     role="main"
     aria-label="Main content"
