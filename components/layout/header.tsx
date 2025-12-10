@@ -11,7 +11,6 @@ const Header: React.FC = () => {
   const pathname = usePathname()
   const [isMounted, setIsMounted] = useState(false);
   const isHome = pathname === "/";
-  const isProject = pathname.includes("/projects/");
 
   useEffect(() => {
     setIsMounted(true);
