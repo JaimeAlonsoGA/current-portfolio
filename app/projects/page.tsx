@@ -10,10 +10,9 @@ export default function ProjectsPage() {
             Projects
           </h1>
           <p className="text-white/70 text-lg">
-            A collection of applications, systems, and tools I've built
+            A collection of applications, systems, and tools I have built
           </p>
         </div>
-
         <div className="space-y-6">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />

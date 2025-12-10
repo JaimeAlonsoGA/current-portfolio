@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
-const Arrow: React.FC<{ isProject: boolean; isHome: boolean }> = ({
-    isProject,
+const Arrow: React.FC<{ isHome: boolean }> = ({
     isHome,
 }) => {
     if (isHome) {

@@ -56,7 +56,7 @@ const Header: React.FC = () => {
         </h1>
       </div>
       }
-      <Arrow isHome={isHome} isProject={isProject} />
+      <Arrow isHome={isHome} />
       <nav className="flex items-center gap-4 sm:gap-6">
         <a
           className={cn(
