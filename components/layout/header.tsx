@@ -38,7 +38,7 @@ const Header: React.FC = () => {
   return (
     <header
       className={cn(
-        "fixed backdrop-blur-lg z-10 w-full top-0",
+        "fixed backdrop-blur-lg z-50 w-full top-0",
         "flex flex-row justify-around sm:justify-between items-center px-4 sm:px-8 py-4",
         "font-[family-name:var(--font-geist-sans)]",
         "bg-black/10 border-b border-white/10 shadow-sm gap-4"

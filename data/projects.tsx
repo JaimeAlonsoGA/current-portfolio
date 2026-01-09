@@ -4,7 +4,6 @@ export interface ProjectProps {
   overview: string;
   description: string;
   tags: string[];
-  icon?: string;
   link: {
     url: string;
     label: string;
@@ -24,7 +23,6 @@ export const projects = [
     description:
       "Alchimix is a [b]phone app[/b] currently published on the [link:Google Play](https://play.google.com/store/apps/details?id=com.sonicode.coctelapp&pcampaignid=web_share).\nIts purpose was to consolidate my knowledge of the [b]end-to-end app development cycle,[/b] including [b]testing[/b] and [b]deployment.[/b] On top of that, the app was a [b]friend's birthday present.[/b]\n\n Alchimix allows users to: \n• Create a [b]pantry[/b] \n• Categorize [b]ingredients[/b] \n• Craft [b]cocktails.[/b] \n• Read easy-to-follow [b]recipes[/b] \n\n✅ The interface is intuitive\n✅ Its active users enjoy using it and give valuable feedback \n✅ This project has fulfilled its purpose and remains a fun and - unexpectedly - useful application.",
     tags: ["react native", "javascript", "expo", "figma"],
-    icon: "/images/alchimix/logo.webp",
     link: [
       {
         url: "https://play.google.com/store/apps/details?id=com.sonicode.coctelapp&pcampaignid=web_share",
@@ -46,7 +44,7 @@ export const projects = [
     video: "https://youtube.com/embed/tVVbru0DCGo?feature=share",
     highlight: true,
   },
-  
+
   {
     id: "400",
     title: "Internal Management System",
@@ -62,7 +60,6 @@ export const projects = [
       "tanstack query",
       "figma",
     ],
-    icon: "/images/400/icon.webp",
     images: [
       "/images/400/card1.webp",
       "/images/400/card2.webp",
@@ -110,7 +107,6 @@ export const projects = [
       "/images/mirto/frame3.webp",
     ],
     type: "app",
-    icon: "/images/mirto/icon.webp",
     highlight: true,
   },
   {
@@ -135,7 +131,6 @@ export const projects = [
     description:
       "The Visu is a public exam that biologists take to qualify as teachers for public schools. The exam focuses on studying the Latin names of living organisms, with an emphasis on identifying and understanding different parts of those organisms.\n\nIt functions are: \n• [b]Simulate[/b] a [b]real Visu exam[/b] \n• [b]Search[/b] categorized [b]species[/b] \n• [b]Practice[/b] with [b]categories[/b] independantly \n• Display [b]various pictures[/b] of one specie. It was not published yet since the app is still not finished but the code can be found on [link:GitHub](https://github.com/JaimeAlonsoGA/bio-visu). \n\n✅ The app was developed in collaboration with a biologist.",
     tags: ["javascript", "react native", "expo", "figma"],
-    icon: "/images/visu/icon.webp",
     link: [
       {
         url: "https://github.com/JaimeAlonsoGA/bio-visu",
@@ -158,7 +153,6 @@ export const projects = [
     description:
       "Vivilife is a [b]project[/b] of [link:Klajdi Beqiraj](https://www.linkedin.com/in/klajdi-beqiraj-1998-leven/) and [link:Gonzalo Alonso](https://www.linkedin.com/in/galonsog/) dedicated to building a [b]dynamic space for coaches and communities[/b]. I was the responsable of creating the [b]landing page.[/b] \n\n✅ The web was [b]successfully launched[/b] before the startup was [b]presented to inverstors.[/b]",
     tags: ["react", "tailwindcss"],
-    icon: "/images/vivilife/icon.webp",
     link: [
       {
         url: "https://vivilife-web.web.app/",
