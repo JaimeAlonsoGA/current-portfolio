@@ -67,7 +67,9 @@ export const projects = [
     tags: ["inference models", "ai", "c++", "python", "react", "supabase", "figma", "stripe"],
     link: [],
     type: "plugin",
-    images: [],
+    images: [
+      "/images/incoming.webp",
+    ],
     video: "",
     highlight: true,
   },
@@ -118,7 +120,24 @@ export const projects = [
     tags: ["gsap", "framer-motion", "react", "frontend", "tailwindv4", "figma"],
     link: [],
     type: "web",
-    images: [],
+    images: [
+      "/images/incoming.webp",
+    ],
+    video: "",
+    highlight: true,
+  },
+
+  {
+    id: "webservice",
+    title: "We Web Webs",
+    overview: "Landing page for a web design agency.",
+    description: "Landing page for a web design agency.",
+    tags: ["gsap", "framer-motion", "react", "frontend", "tailwindv4", "figma"],
+    link: [],
+    type: "web",
+    images: [
+      "/images/incoming.webp",
+    ],
     video: "",
     highlight: true,
   },

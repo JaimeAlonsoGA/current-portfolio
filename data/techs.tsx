@@ -1,4 +1,4 @@
-import { SiPreact, SiTsnode } from "react-icons/si";
+import { SiCplusplus, SiPostman, SiPreact, SiStripe, SiTsnode, SiWagmi, SiWeb3Dotjs } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
 import { IconType } from "react-icons/lib";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -11,6 +11,8 @@ import { TbBrandReactNative } from "react-icons/tb";
 import { SiExpo } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiReactquery } from "react-icons/si";
+import { SiSupabase } from "react-icons/si";
+import { SiPython } from "react-icons/si";
 
 export interface TechsInterface {
   id: string;
@@ -33,6 +35,30 @@ export const techs: TechsInterface[] = [
     color: "#000000", // Negro
   },
   {
+    id: "supabase",
+    name: "Supabase",
+    icon: SiSupabase,
+    color: "#3ECF8E", // Verde Oscuro
+  },
+  {
+    id: "python",
+    name: "Python",
+    icon: SiPython,
+    color: "#3776AB", // Azul
+  },
+  {
+    id: "tanstack query",
+    name: "Tanstack Query",
+    icon: SiReactquery,
+    color: "#FF4154", // Rojo
+  },
+  {
+    id: "web3",
+    name: "Web3",
+    icon: SiWeb3Dotjs,
+    color: "#F16822", // Naranja
+  },
+  {
     id: "tailwindcss",
     name: "Tailwind",
     icon: RiTailwindCssFill,
@@ -43,6 +69,12 @@ export const techs: TechsInterface[] = [
     name: "TypeScript",
     icon: SiTypescript,
     color: "#3178C6", // Azul
+  },
+  {
+    id: "stripe",
+    name: "Stripe",
+    icon: SiStripe,
+    color: "#FFCA28", // Amarillo
   },
   {
     id: "graphql",
@@ -63,10 +95,10 @@ export const techs: TechsInterface[] = [
     color: "#F24E1E", // Naranja
   },
   {
-    id: "javascript",
-    name: "JavaScript",
-    icon: SiJavascript,
-    color: "#F7DF1E", // Amarillo
+    id: "postman",
+    name: "Postman",
+    icon: SiPostman,
+    color: "#FF6C00", // Naranja
   },
   {
     id: "react native",
@@ -81,16 +113,16 @@ export const techs: TechsInterface[] = [
     color: "#000020", // Azul oscuro
   },
   {
-    id: "postgresql",
-    name: "PostgreSQL",
-    icon: BiLogoPostgresql,
-    color: "#336791", // Azul
+    id: "wagmi",
+    name: "Wagmi",
+    icon: SiWagmi,
+    color: "#FF4154", // Rojo
   },
   {
-    id: "tanstack query",
-    name: "Tanstack Query",
-    icon: SiReactquery,
-    color: "#FF4154", // Rojo
+    id: "c++",
+    name: "C++",
+    icon: SiCplusplus,
+    color: "#00599C", // Azul
   },
   {
     id: "node",
