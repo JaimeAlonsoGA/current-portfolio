@@ -14,6 +14,20 @@ export interface ProjectProps {
   highlight?: boolean;
 }
 
+
+// {
+//   id: "",
+//   title: "",
+//   overview: "",
+//   description: "",
+//   tags: [""],
+//   link: [],
+//   type: "",
+//   images: [],
+//   video: "",
+//   highlight: true,
+// },
+
 export const projects = [
   {
     id: "alchimix",
@@ -46,6 +60,70 @@ export const projects = [
   },
 
   {
+    id: "sona",
+    title: "Sona",
+    overview: "AI audio generation plugin.",
+    description: "Sona is an AI sound and music generation plugin for VST3 and Standalone formats. It can generate music, loops, one shots and sound effects using Stable Audio 2.5 and Stable Audio Open models. ",
+    tags: ["inference models", "ai", "c++", "python", "react", "supabase", "figma", "stripe"],
+    link: [],
+    type: "plugin",
+    images: [],
+    video: "",
+    highlight: true,
+  },
+
+  {
+    id: "superbullish",
+    title: "Super Bullish",
+    overview: "Crypto WEB3 video customization platform.",
+    description: "WEB3 app for Crypto video customization platform with Crypto wallet integration.",
+    tags: ["crypto", "web3", "supabase", "metamask", "wagmi", "react"],
+    link: [],
+    type: "web app",
+    images: [
+      "/images/superbullish/superbullish1.webp",
+      "/images/superbullish/superbullish2.webp",
+      "/images/superbullish/superbullish3.webp",
+      "/images/superbullish/superbullish4.webp",
+      "/images/superbullish/superbullish5.webp",
+    ],
+    video: "",
+    highlight: true,
+  },
+
+  {
+    id: "vor2ex",
+    title: "Vor2ex",
+    overview: "Amazon product finder and niche analyzer for FBA sellers.",
+    description: "Vor2ex helps FBA sellers find rentable products to sell by scraping Amazon and using it's restAPI, it processes products and creates simplified reports and analytics based on complex datasets. It's also provided with an Alibaba provider scraper to do comparison when scouting products. this project was my Bachelor's Final Project.",
+    tags: ["amazon", "alibaba", "rest-api", "scraper", "nextjs", "supabase", "stripe", "chartjs"],
+    link: [],
+    type: "pwa",
+    images: [
+      "/images/vor2ex/vor2ex1.webp",
+      "/images/vor2ex/vor2ex2.webp",
+      "/images/vor2ex/vor2ex3.webp",
+      "/images/vor2ex/vor2ex4.webp",
+      "/images/vor2ex/vor2ex5.webp",
+    ],
+    video: "",
+    highlight: true,
+  },
+
+  {
+    id: "elboskev2",
+    title: "El Boske Music Studio",
+    overview: "Landing page for El Boske, a Music studio.",
+    description: "Landing page including GSAP scrolling effects, psichedelic animations and custom design sections for El Boske, a Music studio.",
+    tags: ["gsap", "framer-motion", "react", "frontend", "tailwindv4", "figma"],
+    link: [],
+    type: "web",
+    images: [],
+    video: "",
+    highlight: true,
+  },
+
+  {
     id: "400",
     title: "Internal Management System",
     overview:
@@ -59,6 +137,7 @@ export const projects = [
       "tailwindcss",
       "tanstack query",
       "figma",
+      "firebase",
     ],
     images: [
       "/images/400/card1.webp",
@@ -72,7 +151,7 @@ export const projects = [
       "/images/400/card9.webp",
     ],
     video: "https://www.youtube.com/embed/FYXvtEI2agk?si=VsCWdzB4bo7s97AU",
-    type: "app",
+    type: "pwa",
     highlight: true,
     link: [],
   },
@@ -118,18 +197,17 @@ export const projects = [
       "Retailers working with Shopify have often found uploading and synchronizing product listings between stores a painful task. \n\n✅ Using [b]GraphQL[/b] and the [b]Shopify API,[/b] I created this program that [b]saves time[/b] by [b]automating[/b] the synchronization given an SVG or JSON file. \n\n Actually, this program belongs to [b]MIRTO Corporation[/b]",
     tags: ["typescript", "node", "graphql"],
     images: ["https://canalcero.com/wp-content/uploads/2023/08/shopify.jpeg"],
-    type: "program",
+    type: "plugin",
     highlight: true,
     link: [],
   },
 
   {
-    id: "visuvisu",
-    title: "Visu? Visu!",
-    overview:
-      "Phone app created hand-by-hand with a biologist to help study the visu exam",
+    id: "biovisu",
+    title: "Bio Visu",
+    overview: "Created hand-by-hand with a biologist to help study the visu exam.",
     description:
-      "The Visu is a public exam that biologists take to qualify as teachers for public schools. The exam focuses on studying the Latin names of living organisms, with an emphasis on identifying and understanding different parts of those organisms.\n\nIt functions are: \n• [b]Simulate[/b] a [b]real Visu exam[/b] \n• [b]Search[/b] categorized [b]species[/b] \n• [b]Practice[/b] with [b]categories[/b] independantly \n• Display [b]various pictures[/b] of one specie. It was not published yet since the app is still not finished but the code can be found on [link:GitHub](https://github.com/JaimeAlonsoGA/bio-visu). \n\n✅ The app was developed in collaboration with a biologist.",
+      "The Visu is a public exam that biologists take to qualify as teachers for public schools. The exam focuses on studying the Latin names of living organisms, with an emphasis on identifying and understanding different parts of those organisms.\n\nIt functions are: \n• [b]Simulate[/b] a [b]real Visu exam[/b] \n• [b]Search[/b] categorized [b]species[/b] \n• [b]Practice[/b] with [b]categories[/b] independantly \n• Display [b]various pictures[/b] of one specie. It was not published since the app is still not finished but the code can be found on [link:GitHub](https://github.com/JaimeAlonsoGA/bio-visu). \n\n✅ The app was developed in collaboration with a biologist.",
     tags: ["javascript", "react native", "expo", "figma"],
     link: [
       {
@@ -148,8 +226,7 @@ export const projects = [
   {
     id: "vivilife",
     title: "Vivilife Landing Page",
-    overview:
-      "Landing page for Vivilife, an app for coaches and communities",
+    overview: "Landing page for Vivilife, an app for coaches and communities.",
     description:
       "Vivilife is a [b]project[/b] of [link:Klajdi Beqiraj](https://www.linkedin.com/in/klajdi-beqiraj-1998-leven/) and [link:Gonzalo Alonso](https://www.linkedin.com/in/galonsog/) dedicated to building a [b]dynamic space for coaches and communities[/b]. I was the responsable of creating the [b]landing page.[/b] \n\n✅ The web was [b]successfully launched[/b] before the startup was [b]presented to inverstors.[/b]",
     tags: ["react", "tailwindcss"],
@@ -173,7 +250,7 @@ export const projects = [
   {
     id: "musickeyboard",
     title: "Musickeyboard.io",
-    overview: "A simple music keyboard to play with",
+    overview: "A simple music keyboard to play with.",
     description:
       "Summer is long and sometimes you just want to play the keys on your laptop keyboard to get some inspiration at night. \n\nThat is why I created [link:musickeyboard.io](https://musickeyboard.web.app) , with some features: \n• Easy to use [b]keyboard web[/b]\n• [b]8 octaves[/b], just like a [b]real piano[/b] \n• A lot of [b]customization[/b] options to get inspired \n• [b]Chord tracker[/b] \n\n ✅ Still recibing core sound fix updates.",
     tags: ["react", "javascript", "tailwindcss"],
@@ -192,12 +269,12 @@ export const projects = [
       "/images/musickeyboard/card2.webp",
       "/images/musickeyboard/card3.webp",
     ],
-    type: "app",
+    type: "web app",
   },
   {
     id: "jaime360",
     title: "Jaime360",
-    overview: "My old portfolio, a bit too much creative",
+    overview: "My old portfolio, a bit too much creative.",
     description:
       "When I started creating webs I had some experience with sound design and videogame audio so I created a portfolio to showcase both skills, software and audio. \n\n• This web is [b]deprecated[/b]\n\n✅ Creating it settled the foundations of my knowledge of [b]Firebase Hosting:[/b] [link: website](https://jaime360.web.app)",
     tags: ["react", "javascript", "tailwindcss", "firebase"],
@@ -220,9 +297,9 @@ export const projects = [
     type: "web",
   },
   {
-    id: "elboske",
+    id: "elboskev1",
     title: "Mixing studio website",
-    overview: "Music studio website in Madrid, Spain",
+    overview: "Old version of El Boske Music studio landing page.",
     description:
       "El Boske Mixing Studio is my own music studio in Madrid, Spain. I wanted to create a website to present my work and the services of the studio \n\n• The web is [b]fully responsive[/b] and [b]optimized for SEO[/b] \n• It has a [b]mailing automated system[/b] \n\n ✅ The site fulfills its purpose.",
     tags: ["react", "javascript", "tailwindcss", "firebase"],
