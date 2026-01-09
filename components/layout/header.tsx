@@ -29,7 +29,7 @@ const Header: React.FC = () => {
     },
     {
       name: "GitHub",
-      href: "https://github.com/jaime360",
+      href: "https://github.com/JaimeAlonsoGA",
       icon: FiGithub,
     },
   ];

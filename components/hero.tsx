@@ -71,10 +71,10 @@ const Hero = () => {
                     word.toLowerCase().includes("applications")
                     ? "text-blue-400"
                     : word.toLowerCase().includes("software") ||
-                      word.toLowerCase().includes("solutions")
+                      word.toLowerCase().includes("cross-platform")
                       ? "text-green-400"
                       : word.toLowerCase().includes("cutting-edge") ||
-                        word.toLowerCase().includes("cross-platform")
+                        word.toLowerCase().includes("solutions")
                         ? "text-orange-400"
                         : "text-gray-300"
                 }
