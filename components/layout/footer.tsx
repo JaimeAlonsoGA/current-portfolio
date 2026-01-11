@@ -18,7 +18,7 @@ const Footer = () => {
       <Blanket />
       <div className="absolute bottom-0 w-full flex justify-center items-center py-2 backdrop-blur-sm bg-black/10">
         <p className="text-white/70 text-xs">
-          © {currentYear} Jaime Alonso García-Amorena. All rights reserved. Updated June 2025. Currently outdated, projects in development.
+          © {currentYear} Jaime Alonso García-Amorena. All rights reserved. Updated December 2025. Beware, projects in development!
         </p>
       </div>
     </footer>
