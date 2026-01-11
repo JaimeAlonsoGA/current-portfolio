@@ -14,7 +14,6 @@ export interface ProjectProps {
   highlight?: boolean;
 }
 
-
 // {
 //   id: "",
 //   title: "",
@@ -30,34 +29,39 @@ export interface ProjectProps {
 
 export const projects = [
   {
-    id: "alchimix",
-    title: "Alchimix",
+    id: "mirto",
+    title: "Mirto",
     overview:
-      "Phone app to create custom cocktails with no limits.",
+      "Phone app for MIRTO® with a complete push notification system.",
     description:
-      "Alchimix is a [b]phone app[/b] currently published on the [link:Google Play](https://play.google.com/store/apps/details?id=com.sonicode.coctelapp&pcampaignid=web_share).\nIts purpose was to consolidate my knowledge of the [b]end-to-end app development cycle,[/b] including [b]testing[/b] and [b]deployment.[/b] On top of that, the app was a [b]friend's birthday present.[/b]\n\n Alchimix allows users to: \n• Create a [b]pantry[/b] \n• Categorize [b]ingredients[/b] \n• Craft [b]cocktails.[/b] \n• Read easy-to-follow [b]recipes[/b] \n\n✅ The interface is intuitive\n✅ Its active users enjoy using it and give valuable feedback \n✅ This project has fulfilled its purpose and remains a fun and - unexpectedly - useful application.",
-    tags: ["react native", "javascript", "expo", "figma"],
+      "[b]The MIRTO Official App[/b] is a [b]luxury fashion retail application[/b] for the [b]famous Spanish brand MIRTO.[/b] It was commissioned by [b]MIRTO Corporation[/b] as an extension of its online Shopify store, [link:mirto.com](https://mirto.com).\n[b]I was responsible for the complete design, development, and publication of the app,[/b] including the [b]backend[/b] and the [b]push notification system.[/b]\nIt integrates multiple services such as [b]Firestore, Firebase Cloud Functions, and Cloud Scheduler.[/b] Additionally, a [b]private external notification management app[/b] was developed for MIRTO employees, allowing them to [b]schedule and send notifications[/b] to all devices. It can be found on both [link:Google Play](https://play.google.com/store/apps/details?id=com.mirto.shop&hl=es) and [link:Apple Store](https://apps.apple.com/us/app/mirto/id6743855760)\n\n✅ The app is [b]fully optimized[/b] for both [b]iOS and Android,[/b] ensuring a seamless experience across both operative systems.",
+    tags: [
+      "typescript",
+      "react native",
+      "expo",
+      "javascript",
+      "tailwindcss",
+      "firebase",
+    ],
     link: [
       {
-        url: "https://play.google.com/store/apps/details?id=com.sonicode.coctelapp&pcampaignid=web_share",
+        url: "https://play.google.com/store/apps/details?id=com.mirto.shop&hl=es",
         label: "Play Store",
       },
       {
-        url: "https://github.com/JaimeAlonsoGA/alchimix",
-        label: "GitHub",
+        url: "https://apps.apple.com/us/app/mirto/id6743855760",
+        label: "App Store",
       },
     ],
-    type: "app",
     images: [
-      "/images/alchimix/frame1.webp",
-      "/images/alchimix/frame2.webp",
-      "/images/alchimix/frame3.webp",
-      "/images/alchimix/figma1.webp",
-      "/images/alchimix/figma2.webp",
+      "/images/mirto/frame1.webp",
+      "/images/mirto/frame2.webp",
+      "/images/mirto/frame3.webp",
     ],
-    video: "https://youtube.com/embed/tVVbru0DCGo?feature=share",
+    type: "app",
     highlight: true,
   },
+
 
   {
     id: "sona",
@@ -128,6 +132,36 @@ export const projects = [
   },
 
   {
+    id: "alchimix",
+    title: "Alchimix",
+    overview:
+      "Phone app to create custom cocktails with no limits.",
+    description:
+      "Alchimix is a [b]phone app[/b] currently published on the [link:Google Play](https://play.google.com/store/apps/details?id=com.sonicode.coctelapp&pcampaignid=web_share).\nIts purpose was to consolidate my knowledge of the [b]end-to-end app development cycle,[/b] including [b]testing[/b] and [b]deployment.[/b] On top of that, the app was a [b]friend's birthday present.[/b]\n\n Alchimix allows users to: \n• Create a [b]pantry[/b] \n• Categorize [b]ingredients[/b] \n• Craft [b]cocktails.[/b] \n• Read easy-to-follow [b]recipes[/b] \n\n✅ The interface is intuitive\n✅ Its active users enjoy using it and give valuable feedback \n✅ This project has fulfilled its purpose and remains a fun and - unexpectedly - useful application.",
+    tags: ["react native", "javascript", "expo", "figma"],
+    link: [
+      {
+        url: "https://play.google.com/store/apps/details?id=com.sonicode.coctelapp&pcampaignid=web_share",
+        label: "Play Store",
+      },
+      {
+        url: "https://github.com/JaimeAlonsoGA/alchimix",
+        label: "GitHub",
+      },
+    ],
+    type: "app",
+    images: [
+      "/images/alchimix/frame1.webp",
+      "/images/alchimix/frame2.webp",
+      "/images/alchimix/frame3.webp",
+      "/images/alchimix/figma1.webp",
+      "/images/alchimix/figma2.webp",
+    ],
+    video: "https://youtube.com/embed/tVVbru0DCGo?feature=share",
+    highlight: false,
+  },
+
+  {
     id: "webservice",
     title: "We Web Webs",
     overview: "Landing page for a web design agency.",
@@ -139,7 +173,7 @@ export const projects = [
       "/images/incoming.webp",
     ],
     video: "",
-    highlight: true,
+    highlight: false,
   },
 
   {
@@ -171,42 +205,10 @@ export const projects = [
     ],
     video: "https://www.youtube.com/embed/FYXvtEI2agk?si=VsCWdzB4bo7s97AU",
     type: "pwa",
-    highlight: true,
+    highlight: false,
     link: [],
   },
-  {
-    id: "mirto",
-    title: "Mirto",
-    overview:
-      "Phone app for MIRTO® with a complete push notification system.",
-    description:
-      "[b]The MIRTO Official App[/b] is a [b]luxury fashion retail application[/b] for the [b]famous Spanish brand MIRTO.[/b] It was commissioned by [b]MIRTO Corporation[/b] as an extension of its online Shopify store, [link:mirto.com](https://mirto.com).\n[b]I was responsible for the complete design, development, and publication of the app,[/b] including the [b]backend[/b] and the [b]push notification system.[/b]\nIt integrates multiple services such as [b]Firestore, Firebase Cloud Functions, and Cloud Scheduler.[/b] Additionally, a [b]private external notification management app[/b] was developed for MIRTO employees, allowing them to [b]schedule and send notifications[/b] to all devices. It can be found on both [link:Google Play](https://play.google.com/store/apps/details?id=com.mirto.shop&hl=es) and [link:Apple Store](https://apps.apple.com/us/app/mirto/id6743855760)\n\n✅ The app is [b]fully optimized[/b] for both [b]iOS and Android,[/b] ensuring a seamless experience across both operative systems.",
-    tags: [
-      "typescript",
-      "react native",
-      "expo",
-      "javascript",
-      "tailwindcss",
-      "firebase",
-    ],
-    link: [
-      {
-        url: "https://play.google.com/store/apps/details?id=com.mirto.shop&hl=es",
-        label: "Play Store",
-      },
-      {
-        url: "https://apps.apple.com/us/app/mirto/id6743855760",
-        label: "App Store",
-      },
-    ],
-    images: [
-      "/images/mirto/frame1.webp",
-      "/images/mirto/frame2.webp",
-      "/images/mirto/frame3.webp",
-    ],
-    type: "app",
-    highlight: true,
-  },
+
   {
     id: "shopify",
     title: "Shopify Product Uploader",
@@ -217,7 +219,7 @@ export const projects = [
     tags: ["typescript", "node", "graphql"],
     images: ["https://canalcero.com/wp-content/uploads/2023/08/shopify.jpeg"],
     type: "plugin",
-    highlight: true,
+    highlight: false,
     link: [],
   },
 
@@ -242,6 +244,7 @@ export const projects = [
     video: "https://youtube.com/embed/CGobMb4hzZc?feature=share",
     type: "app",
   },
+
   {
     id: "vivilife",
     title: "Vivilife Landing Page",
@@ -266,6 +269,7 @@ export const projects = [
     ],
     type: "web",
   },
+
   {
     id: "musickeyboard",
     title: "Musickeyboard.io",
@@ -289,6 +293,7 @@ export const projects = [
     ],
     type: "web app",
   },
+
   {
     id: "jaime360",
     title: "Jaime360",
@@ -314,6 +319,7 @@ export const projects = [
     ],
     type: "web",
   },
+
   {
     id: "elboskev1",
     title: "Mixing studio website",
