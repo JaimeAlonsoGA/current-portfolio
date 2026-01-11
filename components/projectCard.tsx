@@ -31,7 +31,7 @@ export function ProjectCard({ project }: { project: ProjectProps }) {
       className="group relative flex flex-col gap-6"
     >
       {/* Card Container */}
-      <div className="relative bg-zinc-900/40 backdrop-blur-md rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 group-hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.05)]">
+      <div className={`${project.highlight ? "shadow-md shadow-yellow-500/10 hover:shadow-yellow-500/20" : "group-hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.05)]"} relative bg-zinc-900/40 backdrop-blur-md rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500`}>
 
         {/* Highlight Badge */}
         {project.highlight && (
@@ -92,7 +92,7 @@ export function ProjectCard({ project }: { project: ProjectProps }) {
               </div>
 
               <Link href={`/projects/${project.id}`} className="group/title block">
-                <h2 className="text-3xl font-bold text-white mb-3 leading-tight group-hover/title:text-primary transition-colors flex items-center gap-2">
+                <h2 className="font-mono text-3xl font-bold text-white mb-3 leading-tight group-hover/title:text-primary transition-colors flex items-center gap-2">
                   {project.title}
                   <ArrowRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover/title:opacity-100 group-hover/title:translate-x-0 transition-all duration-300" />
                 </h2>

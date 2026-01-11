@@ -103,7 +103,7 @@ const Project: React.FC<{ project: ProjectProps; id: string }> = ({
                 </span>
               ))}
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+            <h1 className="font-mono text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
               {project.title}
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-light">

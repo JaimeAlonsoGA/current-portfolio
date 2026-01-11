@@ -29,6 +29,29 @@ export interface ProjectProps {
 
 export const projects = [
   {
+    id: "sona",
+    title: "Sona",
+    overview: "AI audio generation plugin with a subscription-based ux and high-level settings interface for a perfect integration with ai audio generation models.",
+    description: "Sona is an AI sound and music generation plugin for VST3 and Standalone formats. It can generate music, loops, one shots and sound effects using Stable Audio 2.5 and Tangoflux models.",
+    tags: ["ai", "c++", "python", "stripe", "react", "supabase", "tanstack-query", "typescript", "figma", "rest-api", "vst3", "ai-science"],
+    link: [
+      {
+        url: "https://github.com/JaimeAlonsoGA/sona-plugin",
+        label: "GitHub",
+      }
+    ],
+    type: "plugin",
+    images: [
+      "/images/sona/frame1.webp",
+      "/images/sona/frame2.webp",
+      "/images/sona/frame3.webp",
+      "/images/sona/frame4.webp",
+    ],
+    video: "",
+    highlight: true,
+  },
+
+  {
     id: "mirto",
     title: "Mirto",
     overview:
@@ -59,28 +82,6 @@ export const projects = [
       "/images/mirto/frame3.webp",
     ],
     type: "app",
-    highlight: true,
-  },
-
-
-  {
-    id: "sona",
-    title: "Sona",
-    overview: "AI audio generation plugin with a subscription-based ux and high-level settings interface for a perfect integration with ai audio generation models.",
-    description: "Sona is an AI sound and music generation plugin for VST3 and Standalone formats. It can generate music, loops, one shots and sound effects using Stable Audio 2.5 and Tangoflux models.",
-    tags: ["ai", "c++", "python", "stripe", "react", "supabase", "tanstack-query", "typescript", "figma", "rest-api", "vst3", "ai-science"],
-    link: [
-      {
-        url: "https://github.com/JaimeAlonsoGA/sona-plugin",
-        label: "GitHub",
-      }
-    ],
-    type: "plugin",
-    images: [
-      "/images/incoming.webp",
-    ],
-    video: "",
-    highlight: true,
   },
 
   {
@@ -108,7 +109,6 @@ export const projects = [
       "/images/superbullish/superbullish5.webp",
     ],
     video: "",
-    highlight: true,
   },
 
   {
@@ -132,7 +132,6 @@ export const projects = [
       "/images/vor2ex/vor2ex5.webp",
     ],
     video: "",
-    highlight: true,
   },
 
   {
@@ -147,7 +146,6 @@ export const projects = [
       "/images/incoming.webp",
     ],
     video: "",
-    highlight: true,
   },
 
   {
