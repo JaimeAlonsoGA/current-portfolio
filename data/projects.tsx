@@ -137,9 +137,9 @@ export const projects = [
 
   {
     id: "elboskev2",
-    title: "El Boske Music Studio",
-    overview: "Landing page for El Boske, a Music studio.",
-    description: "Landing page including GSAP scrolling effects, psichedelic animations and custom design sections for El Boske, a Music studio.",
+    title: "El Boske | Music Studio",
+    overview: "Landing page for El Boske, a music studio.",
+    description: "Landing page including GSAP scrolling effects, psichedelic animations and custom design sections for El Boske, a music studio.",
     tags: ["gsap", "framer-motion", "react", "front-end", "tailwindv4", "figma"],
     link: [],
     type: "web",
@@ -232,12 +232,12 @@ export const projects = [
 
   {
     id: "psico-web",
-    title: "Alvaro Jiminez Psicología",
-    overview: "Landing page for a psychologist featuring a healthy looking design.",
+    title: "Alvaro Jiminez Psychologist",
+    overview: "Landing page for a psychologist featuring a healthy-looking design.",
     description: "Landing page for Alvaro Jiminez, a psychologist. The website features a clean and healthy design to reflect the services provided.\n\n✅ The website is fully responsive and optimized for SEO.",
     tags: ["react", "typescript", "tailwindcss", "framer-motion", "figma", "contentful", "mental-health"],
     link: [],
-    type: "",
+    type: "web",
     images: [
       "/images/incoming.webp",
     ],
@@ -282,7 +282,7 @@ export const projects = [
 
   {
     id: "vivilife",
-    title: "Vivilife Landing Page",
+    title: "Vivilife | Coaches & Communities",
     overview: "Landing page for Vivilife, an app for coaches and communities.",
     description:
       "Vivilife is a [b]project[/b] of [link:Klajdi Beqiraj](https://www.linkedin.com/in/klajdi-beqiraj-1998-leven/) and [link:Gonzalo Alonso](https://www.linkedin.com/in/galonsog/) dedicated to building a [b]dynamic space for coaches and communities[/b]. I was the responsable of creating the [b]landing page.[/b] \n\n✅ The web was [b]successfully launched[/b] before the startup was [b]presented to inverstors.[/b]",
@@ -357,7 +357,7 @@ export const projects = [
 
   {
     id: "elboskev1",
-    title: "Mixing studio website",
+    title: "El Boske | Mixing Studio",
     overview: "Deprecated landing page for El Boske Music studio.",
     description:
       "El Boske Mixing Studio is my own music studio in Madrid, Spain. I wanted to create a website to present my work and the services of the studio \n\n• The web is [b]fully responsive[/b] and [b]optimized for SEO[/b] \n• It has a [b]mailing automated system[/b] \n\n ✅ The site fulfills its purpose.",
