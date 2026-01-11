@@ -284,9 +284,8 @@ export const projects = [
       },
     ],
     images: [
-      "/images/musickeyboard/card1.webp",
-      "/images/musickeyboard/card2.webp",
-      "/images/musickeyboard/card3.webp",
+      "/images/musickeyboard/musickeyboard1.webp",
+      "/images/musickeyboard/musickeyboard2.webp",
     ],
     type: "web app",
   },
