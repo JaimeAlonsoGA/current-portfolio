@@ -47,7 +47,7 @@ export const techs: TechsInterface[] = [
     color: "#3776AB", // Azul
   },
   {
-    id: "tanstack query",
+    id: "tanstack-query",
     name: "Tanstack Query",
     icon: SiReactquery,
     color: "#FF4154", // Rojo

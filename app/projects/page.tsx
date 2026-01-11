@@ -9,7 +9,7 @@ export default function ProjectsPage() {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
             Projects
           </h1>
-          <p className="text-white/60 text-xl font-light leading-relaxed">
+          <p className="font-mono text-white text-xl font-light leading-relaxed">
             A curated collection of applications, systems, and tools I have built, showcasing fullstack development capabilities.
           </p>
         </div>

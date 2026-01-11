@@ -66,10 +66,15 @@ export const projects = [
   {
     id: "sona",
     title: "Sona",
-    overview: "AI audio generation plugin.",
-    description: "Sona is an AI sound and music generation plugin for VST3 and Standalone formats. It can generate music, loops, one shots and sound effects using Stable Audio 2.5 and Stable Audio Open models. ",
-    tags: ["inference models", "ai", "c++", "python", "react", "supabase", "figma", "stripe"],
-    link: [],
+    overview: "AI audio generation plugin with a subscription-based ux and high-level settings interface for a perfect integration with ai audio generation models.",
+    description: "Sona is an AI sound and music generation plugin for VST3 and Standalone formats. It can generate music, loops, one shots and sound effects using Stable Audio 2.5 and Tangoflux models.",
+    tags: ["ai", "c++", "python", "stripe", "react", "supabase", "tanstack-query", "typescript", "figma", "rest-api", "vst3", "ai-science"],
+    link: [
+      {
+        url: "https://github.com/JaimeAlonsoGA/sona-plugin",
+        label: "GitHub",
+      }
+    ],
     type: "plugin",
     images: [
       "/images/incoming.webp",
@@ -84,7 +89,16 @@ export const projects = [
     overview: "Crypto WEB3 video customization platform.",
     description: "WEB3 app for Crypto video customization platform with Crypto wallet integration.",
     tags: ["crypto", "web3", "supabase", "metamask", "wagmi", "react"],
-    link: [],
+    link: [
+      {
+        url: "https://github.com/JaimeAlonsoGA/superbullish-app",
+        label: "GitHub",
+      },
+      {
+        url: "https://superbullish.xyz/",
+        label: "Website",
+      }
+    ],
     type: "web app",
     images: [
       "/images/superbullish/superbullish1.webp",
@@ -103,7 +117,12 @@ export const projects = [
     overview: "Amazon product finder and niche analyzer for FBA sellers.",
     description: "Vor2ex helps FBA sellers find rentable products to sell by scraping Amazon and using it's restAPI, it processes products and creates simplified reports and analytics based on complex datasets. It's also provided with an Alibaba provider scraper to do comparison when scouting products. this project was my Bachelor's Final Project.",
     tags: ["amazon", "alibaba", "rest-api", "scraper", "nextjs", "supabase", "stripe", "chartjs"],
-    link: [],
+    link: [
+      {
+        url: "https://github.com/JaimeAlonsoGA/vor2ex/tree/main",
+        label: "GitHub",
+      }
+    ],
     type: "pwa",
     images: [
       "/images/vor2ex/vor2ex1.webp",
@@ -121,7 +140,7 @@ export const projects = [
     title: "El Boske Music Studio",
     overview: "Landing page for El Boske, a Music studio.",
     description: "Landing page including GSAP scrolling effects, psichedelic animations and custom design sections for El Boske, a Music studio.",
-    tags: ["gsap", "framer-motion", "react", "frontend", "tailwindv4", "figma"],
+    tags: ["gsap", "framer-motion", "react", "front-end", "tailwindv4", "figma"],
     link: [],
     type: "web",
     images: [
@@ -166,7 +185,7 @@ export const projects = [
     title: "We Web Webs",
     overview: "Landing page for a web design agency.",
     description: "Landing page for a web design agency.",
-    tags: ["gsap", "framer-motion", "react", "frontend", "tailwindv4", "figma"],
+    tags: ["gsap", "framer-motion", "react", "front-end", "tailwindv4", "figma", "design"],
     link: [],
     type: "web",
     images: [
@@ -191,6 +210,8 @@ export const projects = [
       "tanstack query",
       "figma",
       "firebase",
+      "contribution",
+      "rest-api",
     ],
     images: [
       "/images/400/card1.webp",
@@ -210,13 +231,27 @@ export const projects = [
   },
 
   {
+    id: "psico-web",
+    title: "Alvaro Jiminez Psicología",
+    overview: "Landing page for a psychologist featuring a healthy looking design.",
+    description: "Landing page for Alvaro Jiminez, a psychologist. The website features a clean and healthy design to reflect the services provided.\n\n✅ The website is fully responsive and optimized for SEO.",
+    tags: ["react", "typescript", "tailwindcss", "framer-motion", "figma", "contentful", "mental-health"],
+    link: [],
+    type: "",
+    images: [
+      "/images/incoming.webp",
+    ],
+    video: "",
+  },
+
+  {
     id: "shopify",
     title: "Shopify Product Uploader",
     overview:
       "Upload, translate, migrate, and synchronize product listings and stock on Shopify.",
     description:
       "Retailers working with Shopify have often found uploading and synchronizing product listings between stores a painful task. \n\n✅ Using [b]GraphQL[/b] and the [b]Shopify API,[/b] I created this program that [b]saves time[/b] by [b]automating[/b] the synchronization given an SVG or JSON file. \n\n Actually, this program belongs to [b]MIRTO Corporation[/b]",
-    tags: ["typescript", "node", "graphql"],
+    tags: ["typescript", "node", "graphql", "automation", "shopify-dev", "rest-api"],
     images: ["https://canalcero.com/wp-content/uploads/2023/08/shopify.jpeg"],
     type: "plugin",
     highlight: false,
@@ -226,13 +261,13 @@ export const projects = [
   {
     id: "biovisu",
     title: "Bio Visu",
-    overview: "Created hand-by-hand with a biologist to help study the visu exam.",
+    overview: "Co-op hand-by-hand with a biologist to help students pass the Visu Exam with an interactive application.",
     description:
       "The Visu is a public exam that biologists take to qualify as teachers for public schools. The exam focuses on studying the Latin names of living organisms, with an emphasis on identifying and understanding different parts of those organisms.\n\nIt functions are: \n• [b]Simulate[/b] a [b]real Visu exam[/b] \n• [b]Search[/b] categorized [b]species[/b] \n• [b]Practice[/b] with [b]categories[/b] independantly \n• Display [b]various pictures[/b] of one specie. It was not published since the app is still not finished but the code can be found on [link:GitHub](https://github.com/JaimeAlonsoGA/bio-visu). \n\n✅ The app was developed in collaboration with a biologist.",
-    tags: ["javascript", "react native", "expo", "figma"],
+    tags: ["expo", "react native", "wiki-dev", "rest-api", "typescript", "figma", "co-op", "science"],
     link: [
       {
-        url: "https://github.com/JaimeAlonsoGA/bio-visu",
+        url: "https://github.com/JaimeAlonsoGA/visuvisu",
         label: "GitHub",
       },
     ],
@@ -272,8 +307,8 @@ export const projects = [
 
   {
     id: "musickeyboard",
-    title: "Musickeyboard.io",
-    overview: "A simple music keyboard to play with.",
+    title: "musickeyboard.io",
+    overview: "Keyboarding on the web made simple. An interactive application to learn chords.",
     description:
       "Summer is long and sometimes you just want to play the keys on your laptop keyboard to get some inspiration at night. \n\nThat is why I created [link:musickeyboard.io](https://musickeyboard.web.app) , with some features: \n• Easy to use [b]keyboard web[/b]\n• [b]8 octaves[/b], just like a [b]real piano[/b] \n• A lot of [b]customization[/b] options to get inspired \n• [b]Chord tracker[/b] \n\n ✅ Still recibing core sound fix updates.",
     tags: ["react", "javascript", "tailwindcss"],
@@ -323,13 +358,13 @@ export const projects = [
   {
     id: "elboskev1",
     title: "Mixing studio website",
-    overview: "Old version of El Boske Music studio landing page.",
+    overview: "Deprecated landing page for El Boske Music studio.",
     description:
       "El Boske Mixing Studio is my own music studio in Madrid, Spain. I wanted to create a website to present my work and the services of the studio \n\n• The web is [b]fully responsive[/b] and [b]optimized for SEO[/b] \n• It has a [b]mailing automated system[/b] \n\n ✅ The site fulfills its purpose.",
     tags: ["react", "javascript", "tailwindcss", "firebase"],
     link: [
       {
-        url: "https://elboskestudio.com/",
+        url: "https://elboskestudio.web.app/",
         label: "Website",
       },
       {
@@ -338,9 +373,8 @@ export const projects = [
       },
     ],
     images: [
-      "/images/elboske/card1.webp",
-      "/images/elboske/card2.webp",
-      "/images/elboske/card3.webp",
+      "/images/elboske/elboske1.webp",
+      "/images/elboske/elboske2.webp",
     ],
     type: "web",
   },

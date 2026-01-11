@@ -75,7 +75,7 @@ const Project: React.FC<{ project: ProjectProps; id: string }> = ({
   return (
     <div className="min-h-screen bg-black/50 flex flex-col items-center w-full">
       {/* Hero Section with Blur Background */}
-      <div className="relative w-full h-[50vh] min-h-[400px] overflow-hidden">
+      <div className="relative w-full min-h-[400px] overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src={project.images[0] || "/placeholder.svg"}
@@ -87,19 +87,19 @@ const Project: React.FC<{ project: ProjectProps; id: string }> = ({
           <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/50 to-black" />
         </div>
 
-        <div className="relative z-10 h-full flex flex-col justify-end pb-12 px-4 sm:px-8 max-w-7xl mx-auto w-full">
+        <div className="relative z-10 py-24 flex flex-col justify-end pb-12 px-4 sm:px-8 max-w-7xl mx-auto w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="bg-primary/20 text-primary border border-primary/20 px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider">
+              <span className="font-mono font-extrabold bg-primary/20 text-primary border border-primary/20 px-3 py-1 rounded-full text-xs uppercase tracking-wider">
                 {project.type}
               </span>
               {project.tags.map(tag => (
-                <span key={tag} className="bg-white/5 text-white/60 border border-white/10 px-3 py-1 rounded-full text-xs font-medium">
-                  {tag}
+                <span key={tag} className="bg-white/5 text-white/60 border border-white/10 px-3 py-1 rounded-md text-xs font-medium">
+                  #{tag}
                 </span>
               ))}
             </div>
