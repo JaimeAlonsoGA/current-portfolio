@@ -38,6 +38,10 @@ export const projects = [
       {
         url: "https://github.com/JaimeAlonsoGA/sona-plugin",
         label: "GitHub",
+      },
+      {
+        url: "https://sona.audio",
+        label: "Website",
       }
     ],
     type: "plugin",
