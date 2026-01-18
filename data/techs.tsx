@@ -1,4 +1,4 @@
-import { SiCplusplus, SiPostman, SiPreact, SiStripe, SiTsnode, SiWagmi, SiWeb3Dotjs } from "react-icons/si";
+import { SiCplusplus, SiHuggingface, SiPostman, SiPreact, SiStripe, SiTsnode, SiWagmi, SiWeb3Dotjs } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
 import { IconType } from "react-icons/lib";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -124,6 +124,12 @@ export const techs: TechsInterface[] = [
     icon: SiCplusplus,
     color: "#00599C", // Azul
   },
+  // {
+  //   id: "huggingface",
+  //   name: "Hugging Face",
+  //   icon: SiHuggingface,
+  //   color: "#F7DF1E", // Amarillo
+  // },
   {
     id: "node",
     name: "Node",
