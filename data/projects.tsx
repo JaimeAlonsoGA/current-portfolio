@@ -144,7 +144,16 @@ export const projects = [
     overview: "Landing page for El Boske, a music studio.",
     description: "Landing page including GSAP scrolling effects, psichedelic animations and custom design sections for El Boske, a music studio.",
     tags: ["gsap", "framer-motion", "react", "front-end", "tailwindv4", "figma"],
-    link: [],
+    link: [
+      {
+        url: "https://elboske.com",
+        label: "Website",
+      },
+      {
+        url: "https://github.com/JaimeAlonsoGA/studio-web",
+        label: "GitHub",
+      }
+    ],
     type: "web",
     images: [
       "/images/incoming.webp",
